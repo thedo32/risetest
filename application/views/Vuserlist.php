@@ -1,13 +1,33 @@
+	
+	<!-- script for temporary notification -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+		<script>
+			$(document).ready(function() {
+				// Delay in milliseconds (e.g., 8000 ms = 8 seconds)
+				var delay = 8000;
 
-    <title>User Dashboard</title>
+				// Hide the message after the delay
+				setTimeout(function() {
+					$('#addeditSuccessMessage').fadeOut(5000, function() {
+						$(this).remove();
+					});
+				}, delay);
+			});
+		</script>
+    
+
+
+	<title>User Dashboard</title>
 </head>
 <body>
     <h1>User List</h1>
 	 <?php echo validation_errors(); ?>
 
-	<!-- notification if add user success-->
-		<?php if ($this->session->flashdata('category_success')): ?>
-			<p style="color: red;"><?php echo $this->session->flashdata('category_success'); ?></p>
+	<!-- notification if add or edit user success-->
+		<?php if ($this->session->tempdata('add_success')): ?>
+			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('add_success'); ?></p>
+		<?php elseif ($this->session->tempdata('edit_success')): ?>
+			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('edit_success'); ?></p>
 		<?php endif; ?>
     
 

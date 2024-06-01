@@ -1,15 +1,17 @@
 	
 		<title>News Page</title>
 
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		
+		<!-- script for temporary notification -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
 		<script>
 			$(document).ready(function() {
-				// Delay in milliseconds (e.g., 5000 ms = 5 seconds)
-				var delay = 5000;
+				// Delay in milliseconds (e.g., 8000 ms = 8 seconds)
+				var delay = 8000;
 
 				// Hide the message after the delay
 				setTimeout(function() {
-					$('#addeditSuccessMessage').fadeOut('slow', function() {
+					$('#addeditSuccessMessage').fadeOut(5000, function() {
 						$(this).remove();
 					});
 				}, delay);

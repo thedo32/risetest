@@ -49,7 +49,8 @@ class Register extends CI_Controller {
                 $this->Muser->add_user($data);
 
 				//sending email for notification
-				$this->email->from('jeffriargon@gmail.com', 'Jeffri');
+				
+				$this->email->from('jeffriargon@gmail.com', 'jeffriargon@gmail.com');
 				$this->email->to($this->input->post('email'));
 				
 				$this->email->subject('Email Test');
@@ -59,18 +60,16 @@ class Register extends CI_Controller {
 
 				if ($this->email->send()): 
 					// temporary notification after send 
-					$this->session->set_tempdata('email_sent','Email berhasil dikirimkan', 15);
+					$this->session->set_tempdata('email_sent','Email untuk verifikasi user berhasil dikirimkan', 15);
 				else: 
 					// temporary notification after send fail
-					$this->session->set_tempdata('email_failed','Email gagal dikirimkan', 15);
+					$this->session->set_tempdata('email_failed','Email untuk verifikasi user masih terkendala untuk dikirimkan', 15);
 				endif;
-
-				
+								
+								
                 // Redirect to user list page
 				redirect('register/index');
-
-				
-						
+								
 				
             }
         }

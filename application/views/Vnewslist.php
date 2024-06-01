@@ -20,8 +20,10 @@
 
 </head>
 
-<body>
+<body class="bg-body">
     <h2>News Page</h2>
+	<nav class="navbar navbar-expand-md navbar-light fix-navbar shadow-sm">
+        <div class="container">
 	 <?php echo validation_errors(); ?>
 	<?php if ($this->session->userdata("name") !== Null ):?>
            <h6>You're Logged in' !, <?php echo $this->session->userdata("name"); ?></h6>
@@ -34,23 +36,24 @@
 			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('edit_success'); ?></p>
 		<?php endif; ?>
 				
-
-	<?php if ($this->session->userdata("name") === Null):?>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('login'); ?>">Login</a>
-	<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
-		<a href="<?php echo base_url('register/add'); ?>">Add User</a>
-		<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php else: ?>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php endif; ?>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<?php if ($this->session->userdata("name") === Null):?>
+			<a href="<?php echo base_url(''); ?>">Home</a>
+			<a href="<?php echo base_url('login'); ?>">Login</a>
+		<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
+			<a href="<?php echo base_url(''); ?>">Home</a>
+			<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+			<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
+			<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+			<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+			<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+		<?php else: ?>
+			<a href="<?php echo base_url(''); ?>">Home</a>
+			<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+			<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+			<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+		<?php endif; ?>
+	</div>
 
 	<?php if ($this->session->userdata("name") === 'Alpha'):?>	
     <table border="1">
@@ -109,4 +112,5 @@
     <br>
     <?php echo $this->pagination->create_links(); ?>
     <br>
-	
+	</div>
+	</nav>

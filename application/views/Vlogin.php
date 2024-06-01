@@ -8,7 +8,13 @@
 
 		<!-- notification if login error -->
 		<?php if ($this->session->flashdata('error')): ?>
-			<p style="color: green;"><?php echo $this->session->flashdata('error'); ?></p>
+			<p style="color: red;"><?php echo $this->session->flashdata('error'); ?></p>
+		<?php endif; 
+
+		if ($this->session->tempdata('email_sent')): ?>
+					<p style="color: green;"><?php echo $this->session->tempdata('email_sent'); ?></p>
+		<?php elseif ($this->session->tempdata('email_failed')): ?>
+					<p style="color: green;"><?php echo $this->session->tempdata('email_failed'); ?></p>
 		<?php endif; ?>
     
 	

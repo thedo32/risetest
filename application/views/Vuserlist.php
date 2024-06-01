@@ -29,6 +29,12 @@
 		<?php elseif ($this->session->tempdata('edit_success')): ?>
 			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('edit_success'); ?></p>
 		<?php endif; ?>
+
+		<?php if ($this->session->tempdata('email_sent')): ?>
+			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('email_sent'); ?></p>
+		<?php elseif ($this->session->tempdata('email_failed')): ?>
+			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('email_failed'); ?></p>
+		<?php endif; ?>
     
 
 	<?php if ($this->session->userdata("name") === 'Alpha'):?>

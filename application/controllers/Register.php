@@ -48,14 +48,34 @@ class Register extends CI_Controller {
                 // Add user to database
                 $this->Muser->add_user($data);
 
+				//sending email for notification
+				$this->email->from('jeffriargon@gmail.com', 'Jeffri');
+				$this->email->to($this->input->post('email'));
+				
+				$this->email->subject('Email Test');
+				$this->email->message('Testing the email for registration.');
+
+			
+
+				if ($this->email->send()): 
+					// temporary notification after send 
+					$this->session->set_tempdata('email_sent','Email berhasil dikirimkan', 15);
+				else: 
+					// temporary notification after send fail
+					$this->session->set_tempdata('email_failed','Email gagal dikirimkan', 15);
+				endif;
+
 				
                 // Redirect to user list page
 				redirect('register/index');
+
 				
+						
 				
             }
         }
 
+		
         // Load add user view
 			
 		$this->load->view('view_header');
@@ -125,6 +145,10 @@ class Register extends CI_Controller {
 
             // Update user in database
             $this->Muser->edit_user($id, $data);
+
+
+			// temporary notification after edit success
+				$this->session->set_tempdata('edit_success','User berhasil diupdate', 15);
 
             // Redirect to user list page
             redirect('register/index');

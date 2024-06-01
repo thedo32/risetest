@@ -100,7 +100,7 @@ class News extends CI_Controller {
             // Update news in database
             $this->Mnews->edit_news($id, $data);
 
-			// temporary notification after add success
+			// temporary notification after edit success
 				$this->session->set_tempdata('edit_success','Berita berhasil diupdate', 15);
 
             // Redirect to news list page

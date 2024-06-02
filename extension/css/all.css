@@ -7954,13 +7954,14 @@ a.social-media-icon:hover{
 
 .shadowfooter {
         padding: 10px;
-        background-image: url("/storage/app/public/images/bg/background.jpg");
-        bottom:0;
+        background-image: url("/storage/app/public/images/bg/background.png");
+		bottom:0;
         overflow:hidden;
         width:100%;
         position:fixed;
         font-size: 0.6em;
        }
+
 .container-post {
   position: relative;
   width: 100%;
@@ -8216,7 +8217,9 @@ a:hover{
 
 /*additional background with image */
 .fix-navbar {
-	position: fixed;
+	padding::0 10px 0 10px;
+	margin-bottom:30px;
+	position:relative;
 	overflow: hidden;
 	background-image: url('/storage/app/public/images/bg/background.png');
 	top: 0; /* Position the navbar at the top of the page */

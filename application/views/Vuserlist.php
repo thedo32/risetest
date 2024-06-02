@@ -16,8 +16,6 @@
 		</script>
     
 
-
-	<title>User Dashboard</title>
 </head>
 <body>
     <h1>User List</h1>

@@ -1,6 +1,6 @@
-    <title>Edit User</title>
-</head>
-<body>
+ 
+</head>  
+<body class="bg-body">
     <h1>Edit User</h1>
 
     <!-- Display validation errors -->

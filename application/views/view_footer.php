@@ -1,4 +1,6 @@
    <p>
-   <em>&copy; <script>document.write( new Date().getFullYear() );</script> </em>
+   <div class="shadowfooter">
+         &copy; <script>document.write(new Date().getFullYear())</script> News Page
+    </div>
 </body>
 </html>

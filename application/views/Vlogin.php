@@ -1,62 +1,70 @@
+	<!-- script for temporary notification -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Delay in milliseconds (e.g., 8000 ms = 8 seconds)
+			var delay = 8000;
 
-	<title>Login Page</title>
+			// Hide the message after the delay
+			setTimeout(function() {
+				$('#addeditSuccessMessage').fadeOut(5000, function() {
+                $(this).remove();
+				});
+			}, delay);
+		});
+	</script>
 </head>
-<body>		
-<h2>Login Page</h2>
-		 <a href="<?php echo base_url(''); ?>">Home</a>
-		 <a href="<?php echo base_url('register/add'); ?>">Register</a>
 
-		<!-- notification if login error -->
-		<?php if ($this->session->flashdata('error')): ?>
-			<p style="color: red;"><?php echo $this->session->flashdata('error'); ?></p>
-		<?php endif; 
+<body class="bg-body">
+    <div class=fix-navbar>
+        <h2>Login Page</h2>
+        <a href="<?php echo base_url(''); ?>">Home</a>
+        <a href="<?php echo base_url('register/add'); ?>">Register</a>
+    </div>
+
+    <!-- notification if login error -->
+    <?php if ($this->session->tempdata('error_login')): ?>
+		<p id="addeditSuccessMessage" style="color: red;"><?php echo $this->session->tempdata('error_login'); ?></p>
+    <?php endif; 
 
 		if ($this->session->tempdata('email_sent')): ?>
-					<p style="color: green;"><?php echo $this->session->tempdata('email_sent'); ?></p>
-		<?php elseif ($this->session->tempdata('email_failed')): ?>
-					<p style="color: green;"><?php echo $this->session->tempdata('email_failed'); ?></p>
-		<?php endif; ?>
-    
-	
-		<form action="<?php echo base_url('login/actionlogin'); ?>" method="post">
+    <p style="color: green;"><?php echo $this->session->tempdata('email_sent'); ?></p>
+    <?php elseif ($this->session->tempdata('email_failed')): ?>
+    <p style="color: green;"><?php echo $this->session->tempdata('email_failed'); ?></p>
+    <?php endif; ?>
 
-			<table>
 
-				<tr>
+    <form action="<?php echo base_url('login/actionlogin'); ?>" method="post">
 
-					<td>Username</td>
+        <table>
 
-					<td><input type="text" name="username"></td>
+            <tr>
 
-				</tr>
+                <td>Username</td>
 
-				<tr>
+                <td><input type="text" name="username"></td>
 
-					<td>Password</td>
+            </tr>
 
-					<td><input type="password" name="password"></td>
+            <tr>
 
-				</tr>
+                <td>Password</td>
 
-				<tr>
+                <td><input type="password" name="password"></td>
 
-					<td></td>
+            </tr>
 
-					<td><input type="submit" value="Login"></td>
+            <tr>
 
-				</tr>
+                <td></td>
 
-				
+                <td><input type="submit" value="Login"></td>
 
-			</table>
-
-		</form>
-		<br/>
-
-		
-		
-
-		
+            </tr>
 
 
 
+        </table>
+
+    </form>
+    <br />

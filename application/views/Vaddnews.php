@@ -5,6 +5,7 @@ tinymce.init({
 	selector: 'textarea',
 	plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
 	toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+	height: 350,
 	tinycomments_mode: 'embedded',
 	tinycomments_author: 'Author name',
 	mergetags_list: [
@@ -18,31 +19,35 @@ tinymce.init({
 
 </head>  
 <body class="bg-body">
-   <h1>Add News</h1>
-    <?php echo validation_errors(); ?>
+	<?php echo validation_errors(); ?>
+    <div class=fix-navbar>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+		<div class=fix-menu>
+		
+			<?php if ($this->session->userdata("name") === Null):
+				redirect(base_url(''));	
+			elseif ($this->session->userdata("name") === 'Alpha'):?>
+				<h6>You're Logged in' !,<a href="<?php echo base_url('home'); ?>"> Admin</h6>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php else: ?>
+				<h6>You're Logged in' !,<a href="<?php echo base_url('home'); ?>"><?php echo $this->session->userdata("name") ?> </h6>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php endif; ?>
+		</div>
+	</div>
 
-	
-	<?php if ($this->session->userdata("name") === Null):
-			redirect(base_url(''));	
-	elseif ($this->session->userdata("name") === 'Alpha'):?>
-		<h6>You're Logged in' !, Admin</h6>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('register/add'); ?>">Add User</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php else: ?>
-		<h6>You're Logged in' !, <?php echo $this->session->userdata("name"); ?></h6>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php endif; ?>
-
+	<div class=shadowbox><h4>Add News</h4></div>
 
     <form action="<?php echo base_url('news/add'); ?>" method="post">
         <table>
             <tr>
                 <td>Title</td>
-                <td><input type="text" name="title" value="<?php echo set_value('title'); ?>"></td>
+                <td><input type="text" size="50"  name="title" value="<?php echo set_value('title'); ?>"></td>
             </tr>
             <tr>
                 <td>Text</td>
@@ -54,4 +59,3 @@ tinymce.init({
             </tr>
         </table>
     </form>
-	

@@ -5,6 +5,7 @@ tinymce.init({
 	selector: 'textarea',
 	plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
 	toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+	height: 350,
 	tinycomments_mode: 'embedded',
 	tinycomments_author: 'Author name',
 	mergetags_list: [
@@ -18,32 +19,40 @@ tinymce.init({
 </head>  
 <body class="bg-body">
 	
-	<h2>Edit News</h2>
+	<?php echo validation_errors(); ?>
+    <div class=fix-navbar>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+		<div class=fix-menu>
 
-    <!-- Display validation errors -->
-    <?php echo validation_errors(); ?>
+			<!-- Display validation errors -->
+			<?php echo validation_errors(); ?>
 
-	<?php if ($this->session->userdata("name") === Null):
-			redirect(base_url(''));	
-	elseif ($this->session->userdata("name") === 'Alpha'):?>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('register/add'); ?>">Add User</a>
-		<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php else: ?>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php endif; ?>
+			<?php if ($this->session->userdata("name") === Null):
+					redirect(base_url(''));	
+			elseif ($this->session->userdata("name") === 'Alpha'):?>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php else: ?>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php endif; ?>
+		</div>
+	</div>
+
+	<div class=shadowbox><h4>Edit News</h4></div>
+			
 
     <!-- form action style for editing a user -->
     <form action="<?php echo base_url('news/edit/' . $news->id); ?>" method="post">
         <table>
             <tr>
                 <td>Title</td>
-                <td><input type="text" name="title" value="<?php echo set_value('title', $news->title); ?>"></td>
+                <td><input type="text" size="50" name="title" value="<?php echo set_value('title', $news->title); ?>"></td>
             </tr>
             <tr>
                 <td>Text</td>

@@ -18,10 +18,24 @@
 
 </head>
 <body>
-    <h1>User List</h1>
-	 <?php echo validation_errors(); ?>
+    <div class=fix-navbar>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+		<div class=fix-menu>
+			<?php echo validation_errors(); ?>
+			<?php if ($this->session->userdata("name") === 'Alpha'):?>
+				<h6>You're Logged in' !, Admin</h6>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php else: 
+				redirect(base_url(''));	
+			endif; ?>
+		</div>
+	</div>
+	<div class=shadowbox><h4>User List</h4></div>
 
-	<!-- notification if add or edit user success-->
+		<!-- notification if add or edit user success-->
 		<?php if ($this->session->tempdata('add_success')): ?>
 			<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('add_success'); ?></p>
 		<?php elseif ($this->session->tempdata('edit_success')): ?>
@@ -35,16 +49,7 @@
 		<?php endif; ?>
     
 
-	<?php if ($this->session->userdata("name") === 'Alpha'):?>
-		<h6>You're Logged in' !, Admin</h6>
-		<a href="<?php echo base_url(''); ?>">Home</a>
-		<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-		<a href="<?php echo base_url('register/add'); ?>">Add User</a>
-		<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-	<?php else: 
-		redirect(base_url(''));	
-	endif; ?>
-
+	
     <table border="1">
         <thead>
             <tr>

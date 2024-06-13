@@ -7938,19 +7938,49 @@ a.social-media-icon:hover{
 
 /* ------------ my css for additional ------- */
 
+.news-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+	.news-table td {
+		width: 50%;
+		vertical-align: top;
+		padding: 10px;
+	}
+
+
+.newsbox {
+	border:outset;
+	box-shadow:8px 8px lightgrey;
+	padding: 5px;
+	width: 90%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.news-imgthumb {
+	float: right;
+}
+
+	.news-imgthumb:hover {
+		transform: scale(1.1); /* Enlarge the image */
+	}
 
 
 .shadowbox {
-           border: 1px solid #333;
-           box-shadow: 5px 5px 5px #444;
-           padding: 5px 5px;
-           background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
-           width: 50%;
-           margin-left:auto;
-           margin-right:auto;
-           margin-top: 30px;
-           margin-bottom: 100px;
-       }
+	border: none;
+	box-shadow: 3px 3px 3px #0955e8;
+	padding-bottom: 2px;
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
 
 .shadowfooter {
         padding: 10px;
@@ -8099,10 +8129,10 @@ a.social-media-icon:hover{
    transform: scale(1.6);
 }
 
-
-a:hover{
-    text-decoration:none;
-    font-weight: bold;
+/* ------------
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
 }
 
 
@@ -8216,16 +8246,28 @@ a:hover{
 
 
 /*additional background with image */
+.fix-menu {
+	padding:20px;
+	text-align: right;
+	position: relative;
+	overflow: hidden;
+	top: 0; /* Position the menu at the top right of the page */
+	width: 100%; /* Full width */
+	z-index: 99;
+}
+
 .fix-navbar {
 	padding::0 10px 0 10px;
 	margin-bottom:30px;
-	position:relative;
+	position:fixed;
 	overflow: hidden;
 	background-image: url('/storage/app/public/images/bg/background.png');
 	top: 0; /* Position the navbar at the top of the page */
 	width: 100%; /* Full width */
 	z-index: 99;
 }
+
+
 
 .bg-body {
 	background-image: url('/storage/app/public/images/bg/bodybg.jpg');

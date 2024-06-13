@@ -1,20 +1,25 @@
 </head>
 
 <body class="bg-body">
-    <h1>Add User</h1>
-    <?php echo validation_errors(); ?>
-    <?php if ($this->session->userdata("name") === Null):?>
-    <a href="<?php echo base_url(''); ?>">Home</a>
-    <a href="<?php echo base_url('login'); ?>">Login</a>
-    <?php elseif ($this->session->userdata("name") === 'Alpha'):?>
-    <h6>You're Logged in' !, Admin</h6>
-    <a href="<?php echo base_url(''); ?>">Home</a>
-    <a href="<?php echo base_url('home'); ?>">Dashboard</a>
-    <a href="<?php echo base_url('register'); ?>">User Dashboard</a>
-    <a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-    <?php else:
-		redirect(base_url(''));	
-	endif; ?>
+    <div class=fix-navbar>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+		<div class=fix-menu>
+			<?php echo validation_errors(); ?>
+			<?php if ($this->session->userdata("name") === Null):?>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('login'); ?>">Login</a>
+			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
+				<h6>You're Logged in' !, Admin</h6>
+				<a href="<?php echo base_url(''); ?>">Home</a>
+				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
+				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+			<?php else:
+				redirect(base_url(''));	
+			endif; ?>
+		</div>
+	</div>
+	<div class=shadowbox><h4>Add User</h4></div>
 
     <form action="<?php echo base_url('register/add'); ?>" method="post">
         <table>

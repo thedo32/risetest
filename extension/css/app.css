@@ -257,15 +257,15 @@ a {
 
 	a:hover {
 		color: var(--bs-link-hover-color);
+		font-weight:bold;
 	}
 
-	a:link, a:visited {
+	a:visited {
 		color: --bs-code-color: #d63384;
 		text-decoration:wavy;
-		cursor: auto;
 	}
 
-	a:link:active, a:visited:active {
+	a:active, a:visited:active {
 		color: var(--bs-link-hover-color);
 	}
 
@@ -326,7 +326,9 @@ figure {
 img,
 svg {
 	vertical-align: middle;
+	flex:content;
 }
+
 
 table {
 	caption-side: bottom;

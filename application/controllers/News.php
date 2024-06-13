@@ -24,9 +24,7 @@ class News extends CI_Controller {
 
     public function add() {
         // Check if form submitted
-
 		 
-
       if ($this->input->post()) {
             // Form validation rules
             $this->form_validation->set_rules('title', 'Title', 'required|is_unique[news.title]');
@@ -58,7 +56,7 @@ class News extends CI_Controller {
         // Load add user view
 		$this->load->view('view_header');
         $this->load->view('vaddnews');
-		$this->load->view('view_header');
+		$this->load->view('view_footer');
     }
 
     public function edit($id) {
@@ -138,7 +136,7 @@ class News extends CI_Controller {
     // Pagination configuration
 		$config['base_url'] = base_url('news/index');
 		$config['total_rows'] = $this->Mnews->get_total_news();
-		$config['per_page'] = 10;
+		$config['per_page'] = 6;
 		$config['uri_segment'] = 3;
 
     // Additional pagination settings for better display

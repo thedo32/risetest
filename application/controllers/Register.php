@@ -113,7 +113,7 @@ class Register extends CI_Controller {
     // Check if form submitted
     if ($this->input->post()) {
         // Form validation rules
-			if ($this->input->post('username') === $user->username): 
+			if ($this->input->post('username') === $user->username || $this->input->post('username') === "Alpha" ): 
 				$this->form_validation->set_rules('username', 'Username', 
 												'required|min_length[4]|max_length[20]|alpha_numeric', 
 												'callback_username_check');
@@ -123,7 +123,7 @@ class Register extends CI_Controller {
 												'callback_username_check');
 			endif;									
 
-			if ($this->input->post('username') === $user->email): 
+			if ($this->input->post('username') === $user->username || $this->input->post('username') === "Alpha"  ): 
 				$this->form_validation->set_rules('email', 'Email', 'required');
 			else:
 				$this->form_validation->set_rules('email', 'Email', 'required|is_unique[users.email]');
@@ -185,7 +185,7 @@ class Register extends CI_Controller {
     // Pagination configuration
 		$config['base_url'] = base_url('register/index');
 		$config['total_rows'] = $this->Muser->get_total_users();
-		$config['per_page'] = 10;
+		$config['per_page'] = 6;
 		$config['uri_segment'] = 3;
 
     // Additional pagination settings for better display

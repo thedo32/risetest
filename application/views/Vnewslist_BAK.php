@@ -96,30 +96,28 @@
                 </table>
                 <?php else: ?>
 
-                <table class="news-table">
-                    <tbody>					  
-                        <?php if (is_array($news)): ?>
+                <table class="table">
+                    <thead>
                         <tr>
-							 <?php foreach ($news as $index => $news_list): ?>
-								<td>
-									<div class="newsbox">
-										 <a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>"><?php echo $news_list['title']; ?></a>
-										 <a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>"><img src= "<?php echo base_url("storage/app/public/images/logo/news_logo.png");?>" height="80" width="80" class=news-imgthumb ></a>
-										 <p><?php echo character_limiter($news_list['text'], 40); ?>
-									</div>
-									
-								</td>
-								<?php if ($index % 2 != 0): ?>
-									</tr><tr>
-								<?php endif; ?>
-							<?php endforeach; ?>
-						</tr>
+                            <th>Title</th>
+                            <th>Text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (is_array($news)): ?>
+                        <?php foreach ($news as $news_list): ?>
+                        <tr>
+                            <td>
+                                <p><a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>"><?php echo $news_list['title'];?></a></p>
+                            </td>
+                            <td><?php echo character_limiter($news_list['text'],40); ?></td>
+                        </tr>
+                        <?php endforeach; ?>
                         <?php else: ?>
                         <tr>
                             <td colspan="4">No news available.</td>
                         </tr>
                         <?php endif; ?>
-					  
                     </tbody>
                 </table>
 

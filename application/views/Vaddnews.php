@@ -3,7 +3,7 @@
 // tinymce loader
 tinymce.init({
 	selector: 'textarea',
-	plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+	plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
 	toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
 	height: 350,
 	tinycomments_mode: 'embedded',
@@ -21,7 +21,7 @@ tinymce.init({
 <body class="bg-body">
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
-        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=fix-menu>
 		
 			<?php if ($this->session->userdata("name") === Null):

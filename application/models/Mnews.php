@@ -20,7 +20,7 @@ class Mnews extends CI_Model {
 
 	// Get news by slug
      public function get_news_view($slug) {
-        $query = $this->db->get_where('news', array('slug' => $slug));
+		$query = $this->db->get_where('news', array('slug' => $slug));
         return $query->row(); // Fetch the row as an object
     }
 
@@ -43,6 +43,7 @@ class Mnews extends CI_Model {
 
     // Get news with pagination
     public function get_news_news($limit, $offset) {
+		$this->db->order_by('id', 'DESC');
         $this->db->limit($limit, $offset);
         $query = $this->db->get('news');
         return $query->result_array();

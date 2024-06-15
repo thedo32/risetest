@@ -10,6 +10,5 @@
 				
 
               	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>../extension/css/app.css">
-				<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>../extension/css/all.css">
-			
-				<title>News Page</title>	
+				
+				<title>Kopi Batigo</title>	

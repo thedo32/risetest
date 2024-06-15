@@ -17,13 +17,13 @@
 
 <body class="bg-body">
     <div class=fix-navbar>
-		<a alt="Login Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+		<a alt="Login Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
       	<div class=fix-menu>
 			<a href="<?php echo base_url(''); ?>">Home</a>
 			<a href="<?php echo base_url('register/add'); ?>">Register</a>
 		</div>
 	</div>
-	<div class=shadowbox><h4>Login Page</h4></div> 
+	<div class=shadowboxmin><h1>Login Page</h1></div> 
 
     <!-- notification if login error -->
     <?php if ($this->session->tempdata('error_login')): ?>
@@ -39,7 +39,7 @@
 
     <form action="<?php echo base_url('login/actionlogin'); ?>" method="post">
 
-        <table>
+        <table class=login-table>
 
             <tr>
 

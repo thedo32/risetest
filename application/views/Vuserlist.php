@@ -17,13 +17,13 @@
     
 
 </head>
-<body>
+<body class=bg-body>
     <div class=fix-navbar>
-        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+		<div class=logged-in>You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a></div>
 		<div class=fix-menu>
 			<?php echo validation_errors(); ?>
 			<?php if ($this->session->userdata("name") === 'Alpha'):?>
-				<h6>You're Logged in' !, Admin</h6>
 				<a href="<?php echo base_url(''); ?>">Home</a>
 				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
@@ -33,7 +33,7 @@
 			endif; ?>
 		</div>
 	</div>
-	<div class=shadowbox><h4>User List</h4></div>
+	<div class=shadowboxmin><h1>User List</h1></div>
 
 		<!-- notification if add or edit user success-->
 		<?php if ($this->session->tempdata('add_success')): ?>
@@ -50,7 +50,7 @@
     
 
 	
-    <table border="1">
+    <table class=user-table>
         <thead>
             <tr>
                 <th>ID</th>

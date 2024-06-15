@@ -6,7 +6,7 @@
 
 <body class="bg-body">
 	<div class=fix-navbar>
-		<a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+		<a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=fix-menu>
 			<?php if ($this->session->userdata("name") === 'Alpha'):?>
 				<a href="<?php echo base_url(''); ?>">Home</a>
@@ -18,7 +18,9 @@
 			<?php endif;?>
 		</div>
 	</div>
-	<div class=shadowbox><h4>You're Logged in' </h4></div>
+	<div class=shadowboxmin><h1>You're Logged in'</h1></div>
+	
+	<div class = home-table>
 	<?php if ($this->session->userdata("name") === 'Alpha' ):?>
 			<h6>Welcome <a href="<?php echo base_url('home'); ?>">Admin</a></h6>
 	<?php elseif ($this->session->userdata("name") != Null ):?>
@@ -26,6 +28,8 @@
 	<?php endif; ?>
 
 	<?php 
-		$this->load->view('welcome_message');			
-		$this->load->view('view_footer');
+		$this->load->view('welcome_message');?>
+	</div>	
+	<?php $this->load->view('view_footer');
 	?>
+	

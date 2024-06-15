@@ -2,7 +2,7 @@
 
 <body class="bg-body">
     <div class=fix-navbar>
-        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.gif" width = "128" height = "55"></a>
+        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=fix-menu>
 			<?php echo validation_errors(); ?>
 			<?php if ($this->session->userdata("name") === Null):?>

@@ -162,7 +162,6 @@
 										 <a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>" data-toggle="tooltip" title="<?php echo $news_list['title']; ?>"><img src= "<?php echo base_url("storage/app/public/images/logo/logo.png");?>" height="50" width="65" class=news-imgthumb ></a>
 										 <p><?php echo character_limiter($news_list['text'], 20); ?>
 									</div>
-									
 								</td>
 								<?php if ($index % 2 != 0): ?>
 									</tr><tr>

@@ -5083,7 +5083,7 @@ textarea.form-control-lg {
 	--bs-pagination-disabled-bg: #fff;
 	--bs-pagination-disabled-border-color: #dee2e6;
 	display: flex;
-	padding-left: 0;
+	padding: 5px 0 15px 15px;
 	list-style: none;
 }
 
@@ -12725,14 +12725,15 @@ img {
 	border-radius:5px;
 	box-shadow: 3px 3px lightgrey;
 	padding: 5px 5px 5px 5px;
-	width: 75%;
+	width: 80%;
 	text-align: center;
 	margin: 0 22% 0 auto;
+	
 }
 
 .news-imgthumb {
 	float: right;
-	padding:2px;
+	padding:3px;
 	border:inset;
 	border-radius:2px;
 }

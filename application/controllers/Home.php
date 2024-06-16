@@ -19,7 +19,7 @@
 	
     function index(){
 
-		$this->load->view('Vhome');
+		$this->load->view('vhome');
 
      }
 

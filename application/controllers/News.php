@@ -160,7 +160,6 @@ class News extends CI_Controller {
     // Load news list view
 		$this->load->view('view_header');
 		$this->load->view('vnewslist', $data);
-		$this->load->view('image_slider');
 		$this->load->view('view_footer');
 	}
 

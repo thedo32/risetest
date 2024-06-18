@@ -22,12 +22,17 @@ tinymce.init({
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
         <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+		<div class=logged-in>
+		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a>
+		<?php elseif ($this->session->userdata("name") != Null ):?>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7><?php echo $this->session->userdata("name"); ?></a>
+		<?php endif; ?>	
+		</div>
 		<div class=fix-menu>
-		
 			<?php if ($this->session->userdata("name") === Null):
 				redirect(base_url(''));	
 			elseif ($this->session->userdata("name") === 'Alpha'):?>
-				<h6>You're Logged in' !,<a href="<?php echo base_url('home'); ?>"> Admin</h6>
 				<a href="<?php echo base_url(''); ?>">Home</a>
 				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
@@ -41,10 +46,10 @@ tinymce.init({
 		</div>
 	</div>
 
-	<div class=shadowbox><h4>Add News</h4></div>
+	<div class=shadowboxmin><h1>Add News</h1></div>
 
     <form action="<?php echo base_url('news/add'); ?>" method="post">
-        <table>
+        <table class=login-table>
             <tr>
                 <td>Title</td>
                 <td><input type="text" size="50"  name="title" value="<?php echo set_value('title'); ?>"></td>

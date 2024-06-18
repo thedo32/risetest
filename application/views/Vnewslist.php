@@ -15,8 +15,6 @@
     });
 </script>
 
-
-
 </head>
 
 <body class="bg-body">
@@ -27,7 +25,7 @@
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
 				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a>
 		<?php elseif ($this->session->userdata("name") != Null ):?>
-				<h6>You're Logged in' <a href="<?php echo base_url('home'); ?>"><?php echo $this->session->userdata("name"); ?></a></h6>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7><?php echo $this->session->userdata("name"); ?></a>
 		<?php endif; ?>	
 		</div>
 		
@@ -52,54 +50,9 @@
 	</div>
 	<div class=shadowboxmin><h1>Desa Wisata</h1></div> 
 
-<!-- slider dari BarajaCoding -->
-
-<div class="slideshow-container">	
-	<div class="mySlides fade">
-		<img src= "<?php echo base_url ("/storage/app/public/images/slider/1.png");?>" style="width:80%">
-		<!-- < <div class="text">Caption One</div> --> 
-	</div>
-
-	<div class="mySlides fade">
-		<img src= "<?php echo base_url ("/storage/app/public/images/slider/2.png");?>" style="width:80%">
-		<!-- <div class="text">Caption Two</div> -->
-	</div>
-
-	<div class="mySlides fade">
-		<img src= "<?php echo base_url ("/storage/app/public/images/slider/3.png");?>" style="width:80%">
-		<!-- <div class="text">Caption Three</div> -->
-	</div>
-
-	<div class="mySlides fade">
-		<img src= "<?php echo base_url ("/storage/app/public/images/slider/4.png");?>" style="width:80%">
-		<!-- <div class="text">Caption Fours</div> -->
-	</div>
-</div>
-
-<script>
-	var slideIndex = 1;
-	showSlides();
-
-	function showSlides() {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("dot");
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		}
-		slideIndex++;
-		if (slideIndex > slides.length) {slideIndex = 1}    
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace("active", "");
-		}
-		slides[slideIndex-1].style.display = "block";  
-		setTimeout(showSlides, 10000); // Change image every 4 seconds
-	}
-</script>
-
-<!-- end of slider dari BarajaCoding -->
- 
-	<?php $this->load->view('side_post');?>
+	<?php $this->load->view("header_slider");
+		  $this->load->view('side_post');
+	?>
 
 	<!-- notification if add or edit news success-->
     <?php if ($this->session->tempdata('add_success')): ?>
@@ -152,7 +105,7 @@
 							 <?php foreach ($news as $index => $news_list): ?>
 								<td>
 									<div class="newsbox">
-										 <a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>" data-toggle="tooltip" title="<?php echo $news_list['title']; ?>"><?php echo ellipsize($news_list['title'], 30); ?></a><p>
+										 <div class="sm-title"><a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>" title="<?php echo $news_list['title']; ?>"><?php echo $news_list['title']; ?></a></div><p>
 										 <a href="<?php echo site_url('news/view/' . $news_list['slug']); ?>" data-toggle="tooltip" title="<?php echo $news_list['title']; ?>"><img src= "<?php echo base_url("storage/app/public/images/logo/logo.png");?>" height="50" width="65" class=news-imgthumb ></a>
 										 <p><?php echo character_limiter($news_list['text'], 20); ?>
 									</div>
@@ -176,7 +129,8 @@
     </div>
 	<br>
     <?php echo $this->pagination->create_links(); 
-			   $this->load->view('image_slider');?>
+			   $this->load->view('image_slider');
+	?>
 	<br>
 	<div class=slideshow-container-art>
 		<div class=articlebox>		

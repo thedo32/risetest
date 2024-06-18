@@ -44,12 +44,12 @@ tinymce.init({
 		</div>
 	</div>
 
-	<div class=shadowbox><h4>Edit News</h4></div>
+	<div class=shadowboxmin><h1>Edit News</h1></div>
 			
 
     <!-- form action style for editing a user -->
     <form action="<?php echo base_url('news/edit/' . $news->id); ?>" method="post">
-        <table>
+        <table class=login-table>
             <tr>
                 <td>Title</td>
                 <td><input type="text" size="50" name="title" value="<?php echo set_value('title', $news->title); ?>"></td>

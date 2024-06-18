@@ -1,10 +1,10 @@
 </head>
 
 <body class="bg-body">
+	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
         <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=fix-menu>
-			<?php echo validation_errors(); ?>
 			<?php if ($this->session->userdata("name") === Null):?>
 				<a href="<?php echo base_url(''); ?>">Home</a>
 				<a href="<?php echo base_url('login'); ?>">Login</a>

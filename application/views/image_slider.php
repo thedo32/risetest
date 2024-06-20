@@ -33,12 +33,11 @@
     function showSlidesImg() {
         for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
-            slides[i].style.opacity = 0;
         }
         slideImgIndex++;
         if (slideImgIndex > slides.length) {slideImgIndex = 1}    
-        fadeIn(slides[slideImgIndex-1]);
-        setTimeout(showSlidesImg, 12000); // Change image every 12 seconds
+        fadeInOut(slides[slideImgIndex-1]);
+        setTimeout(showSlidesImg, 13000); // Change image every 13 seconds
     }
 
     function currentSlide(n) {
@@ -51,27 +50,47 @@
         if (n < 1) {slideImgIndex = slides.length}
         for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
-            slides[i].style.opacity = 0;
         }
-        fadeIn(slides[slideImgIndex-1]);
+        fadeInOut(slides[slideImgIndex-1]);
     }
 
     function plusSlides(n) {
         showSlideImg(slideImgIndex += n);
     }
 
-    function fadeIn(element) {
+    function fadeInOut(element) {
         var opacity = 0;
+        var interval = 10; // Interval for smoother transition
+        var duration = 2000; // 2 seconds fade in/out
+
+        element.style.opacity = opacity;
         element.style.display = "block";
-        var timer = setInterval(function() {
+        var fadeInOutTimer = setInterval(function() {
             if (opacity >= 1) {
-                clearInterval(timer);
+                clearInterval(fadeInOutTimer);
+                setTimeout(function() {
+                    fadeOut(element);
+                }, 12000); // Hold the image for 12 seconds before fading out
             }
             element.style.opacity = opacity;
-            opacity += 0.02;
-        }, 20); // 20ms interval to complete the transition in 2 seconds
+            opacity += interval / duration;
+        }, interval);
+    }
+
+    function fadeOut(element) {
+        var opacity = 1;
+        var interval = 10; // Interval for smoother transition
+        var duration = 2000; // 2 seconds fade in/out
+
+        var fadeOutTimer = setInterval(function() {
+            if (opacity <= 0) {
+                clearInterval(fadeOutTimer);
+                element.style.display = "none";
+            }
+            element.style.opacity = opacity;
+            opacity -= interval / duration;
+        }, interval);
     }
 </script>
-
 
 <!-- end of slider dari BarajaCoding -->

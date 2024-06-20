@@ -12522,7 +12522,16 @@ textarea.form-control-lg {
 .bg-body {
 	background-image: url('/storage/app/public/images/bg/bgbody.jpg');
 	background-attachment: scroll;
-	z-index:-1;
+}
+
+.bg-bodypdg {
+	background-image: url('/storage/app/public/images/bg/bgbodypdg.jpg');
+	background-attachment: scroll;
+}
+
+.bg-bodytaluak {
+	background-image: url('/storage/app/public/images/bg/bgbodytaluak.jpg');
+	background-attachment: scroll;
 }
 
 /*-- slider dari BarajaCoding */
@@ -12551,17 +12560,17 @@ img {
 	vertical-align: middle;
 }
 
+
 .mySlidesImg {
 	display: none;
 	opacity: 0;
-	transition: opacity 2s ease-in-out;
+	transition: ease 2s;
 }
 
 	.mySlidesImg img {
 		display: block;
 		margin: auto;
 	}
-
 
 .slideshow-container {
 	max-width: 600px;
@@ -12611,11 +12620,11 @@ img {
 
 	.slideshow-container-art:hover {
 		transition: ease 2s;
-		transform: scale(1.3);
+		transform: scale(1.25);
 		opacity:0.8;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top:-420px;
+		margin-top:-430px;
 	}
 
 /* Next & previous buttons */
@@ -12817,7 +12826,6 @@ img {
 	width: 90%;
 	background-color: #ffffff5a;
 	text-align: left;
-	z-index: 99;
 }
 
 .sidepostboxsmall {
@@ -12830,7 +12838,6 @@ img {
 	width: 100%;
 	background-color: #ffffff7a;
 	text-align: left;
-	z-index: 99;
 }
 
 .news-imgthumb {
@@ -12883,6 +12890,7 @@ img {
 	width: 100%;
 	position: fixed;
 	font-size: 0.8em;
+	z-index:99;
 }
 
 .container-post {
@@ -13078,7 +13086,7 @@ img {
 	white-space: nowrap;
 }
 	.sm-title:hover {
-		max-width:1000px;
+		width:100%;
 		transition:ease 2s;
 		transform:scale(1.1);
 		overflow:visible;

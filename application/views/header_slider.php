@@ -15,15 +15,10 @@
 		<img src= "<?php echo base_url ("/storage/app/public/images/slider/3.png");?>" style="width:80%">
 		<!-- <div class="text">Caption Three</div> -->
 	</div>
-
-	<div class="mySlides fade">
-		<img src= "<?php echo base_url ("/storage/app/public/images/slider/4.png");?>" style="width:80%">
-		<!-- <div class="text">Caption Fours</div> -->
-	</div>
 </div>
 
 <script>
-	var slideIndex = 1;
+	var slideIndex = 0;
 	showSlides();
 
 	function showSlides() {
@@ -39,7 +34,7 @@
 			dots[i].className = dots[i].className.replace("active", "");
 		}
 		slides[slideIndex-1].style.display = "block";  
-		setTimeout(showSlides, 10000); // Change image every 4 seconds
+		setTimeout(showSlides, 9000); // Change image every 9 seconds
 	}
 </script>
 

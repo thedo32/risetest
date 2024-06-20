@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'news/index';
+$route['default_controller'] = 'padang/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
@@ -71,4 +71,25 @@ $route['news/edit/(:num)'] = 'news/edit/$1';
 $route['news/delete/(:num)'] = 'news/delete/$1'; 
 $route['news/index'] = 'news/index'; 
 $route['news/view'] = 'news/view';
+
+$route['padang'] = 'padang/index'; 
+$route['padang/add'] = 'padang/add';
+$route['padang/edit/(:num)'] = 'padang/edit/$1'; 
+$route['padang/delete/(:num)'] = 'padang/delete/$1'; 
+$route['padang/index'] = 'padang/index'; 
+$route['padang/view'] = 'padang/view';
+
+$route['taluak'] = 'taluak/index'; 
+$route['taluak/add'] = 'taluak/add';
+$route['taluak/edit/(:num)'] = 'taluak/edit/$1'; 
+$route['taluak/delete/(:num)'] = 'taluak/delete/$1'; 
+$route['taluak/index'] = 'taluak/index'; 
+$route['taluak/view'] = 'taluak/view';
+
+$route['wisata'] = 'wisata/index'; 
+$route['wisata/add'] = 'wisata/add';
+$route['wisata/edit/(:num)'] = 'wisata/edit/$1'; 
+$route['wisata/delete/(:num)'] = 'wisata/delete/$1'; 
+$route['wisata/index'] = 'wisata/index'; 
+$route['wisata/view'] = 'wisata/view';
 

@@ -1,14 +1,60 @@
 
-    <title>Add User</title>
-</head>
-<body>
-    <h1>Add User</h1>
-    <?php echo validation_errors(); ?>
 
-	<a href="<?php echo base_url(''); ?>">Home</a>
-	<a href="<?php echo base_url('login'); ?>">Login</a>
+</head>
+<body="bg-body">
+   <?php echo validation_errors(); ?>
+
+	 <div class=fix-navbar>
+		<div class=shadowboxmin><h5>User Registration</h5></div> 
+
+		<a alt="Login Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+      	
+		  <div class=fix-menu>
+			<nav class="navbar-expand-md navbar-light">
+		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+     
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="text-center navbar-nav mr-auto">
+			<?php if ($this->session->userdata("name") !== 'Alpha'):?>
+				<li class="nav-item">
+					<a href="<?php echo base_url(''); ?>" >Menara</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('Login'); ?>">Login</a>
+				</li>
+			<?php else:?>
+				<li class="nav-item">
+					<a href="<?php echo base_url(''); ?>">Menara</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				</li>
+			<?php endif; ?>
+			</div>
+			</nav>
+		</div>
+
+
+
 	 <form action="<?php echo base_url('register/add'); ?>" method="post">
-        <table>
+        <table class=login-table>
             <tr>
                 <td>Username</td>
                 <td><input type="text" name="username" value="<?php echo set_value('username'); ?>" size="20" /></td>

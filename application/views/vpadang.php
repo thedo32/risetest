@@ -4,51 +4,83 @@
 
 <body class="bg-body">
 	<div class=fix-navbar>
+	<div class=shadowboxmin><h5>Kupi Batigo Menara</h5></div> 
 		<a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+				
 		<div class=fix-menu>
-			<?php echo validation_errors(); ?>
+			<nav class="navbar-expand-md navbar-light">
+		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+     
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === Null):?>
-				<a href="<?php echo base_url(''); ?>">Home</a>
-				<a href="<?php echo base_url('taluak'); ?>">Taluak Buo</a>
-				<a href="<?php echo base_url('wisata'); ?>">Desa Wisata</a>
-				<a href="<?php echo base_url('login'); ?>">Login</a>
+				<li class="nav-item">
+					<a href="<?php echo base_url(''); ?>" >Menara</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login'); ?>">Login</a>	
+				</li>	
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
-				<a href="<?php echo base_url(''); ?>">Home</a>
-				<a href="<?php echo base_url('taluak'); ?>">Taluak Buo</a>
-				<a href="<?php echo base_url('wisata'); ?>">Desa Wisata</a>
-				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
-				<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				<li class="nav-item">
+					<a href="<?php echo base_url(''); ?>">Menara</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				</li>
 			<?php else: ?>
-				<a href="<?php echo base_url(''); ?>">Home</a>
-				<a href="<?php echo base_url('taluak'); ?>">Taluak Buo</a>
-				<a href="<?php echo base_url('wisata'); ?>">Desa Wisata</a>
-				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				<li class="nav-item">
+					<a href="<?php echo base_url(''); ?>">Menara</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				</li>
 			<?php endif; ?>
+			</div>
+			</nav>
 		</div>
-	</div>
+	</div> 
 
+	  
+	<table class=read-table>
+		<tbody>
+			<tr>
+				<td><h5><?php echo set_value('title', $padang->title); ?></h5></div></td>
+			</tr>
+			<tr>
+				<td><?php echo htmlspecialchars_decode(set_value('text', $padang->text)); ?></td>
+			</tr>
+		</tbody>		
+	</table>
+		
 
-    <div class=shadowboxmin><h4>Kupi Batigo Padang</h1></div> 
-
-	<div class=container>
-        <div class=row>
-            <div class=table-responsive>
-				<table class=news-table>
-					<tbody>
-					<tr>
-						<td><div class="card-title"><h5><?php echo set_value('title', $padang->title); ?></h5></div></td>
-					</tr>
-					<tr>
-						<td><div class="d-flex my-2"><?php echo htmlspecialchars_decode(set_value('text', $padang->text)); ?></div></td>
-					</tr>
-				</tbody>		
-			</table>
-		</div>
-	</div>
-</div>
 
 

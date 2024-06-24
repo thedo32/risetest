@@ -34,7 +34,7 @@
 			dots[i].className = dots[i].className.replace("active", "");
 		}
 		slides[slideIndex-1].style.display = "block";  
-		setTimeout(showSlides, 9000); // Change image every 9 seconds
+		setTimeout(showSlides, 6000); // Change image every 6 seconds
 	}
 </script>
 

@@ -2,29 +2,55 @@
 </head>  
 <body class="bg-body">
     <div class=fix-navbar>
+		<div class=shadowboxmin><h5>Edit User</h5></div>
         <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+				
+		<!-- Display validation errors -->
+		<?php echo validation_errors(); ?>
+
 		<div class=fix-menu>
-
-			<!-- Display validation errors -->
-			<?php echo validation_errors(); ?>
-
+			<nav class="navbar-expand-md navbar-light">
+		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+     
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === 'Alpha'):?>
-				<h6>You're Logged in' !, Admin</h6>
-				<a href="<?php echo base_url(''); ?>">Home</a>
-				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
-				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
-			<?php else: 
+				<li class="nav-item">
+					<a href="<?php echo base_url(''); ?>">Menara</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				</li>
+			<?php else:
 				redirect(base_url(''));	
 			endif; ?>
+			</div>
+			</nav>
 		</div>
 	</div>
-	<div class=shadowbox><h4>Edit User</h4></div>
+	
 
 
     <!-- form action style for editing a user -->
     <form action="<?php echo base_url('register/edit/' . $user->id); ?>" method="post">
-        <table>
+        <table class=reg-table>
             <tr>
                 <td>Username</td>
                 <td><input type="text" name="username" value="<?php echo set_value('username', $user->username); ?>"></td>

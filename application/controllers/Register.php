@@ -180,7 +180,7 @@ class Register extends CI_Controller {
 
     public function index() {
 
-		 $this->check_login(); // Check if user is logged in
+		 //$this->check_login(); // Check if user is logged in
 
     // Pagination configuration
 		$config['base_url'] = base_url('register/index');

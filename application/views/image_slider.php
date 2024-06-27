@@ -70,7 +70,7 @@
                 clearInterval(fadeInOutTimer);
                 setTimeout(function() {
                     fadeOut(element);
-                }, 12000); // Hold the image for 12 seconds before fading out
+                }, 13000); // Hold the image for 13 seconds before fading out
             }
             element.style.opacity = opacity;
             opacity += interval / duration;

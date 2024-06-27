@@ -21,19 +21,23 @@
 <body class="bg-body">
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
-		<div class=shadowboxmin><h5>Kupi Batigo Taluak Buo</h5></div> 
-        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
+		<div class=shadowbox><h5>Kupi Batigo Taluak Buo</h5></div> 
+        <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a>
+				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		<?php elseif ($this->session->userdata("name") != Null ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7><?php echo $this->session->userdata("name"); ?></a>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8><?php echo $this->session->userdata("name"); ?></a>
+				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
+		<?php else:?> 
+				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>	
 		<?php endif; ?>	
 		</div>
 
 			
 		<div class=fix-menu>
-			<nav class="navbar-expand-md navbar-light">
+			<nav class="navbar-expand-lg navbar-light">
 		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,9 +51,6 @@
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('login'); ?>">Login</a>	
-				</li>	
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
 					<a href="<?php echo base_url(''); ?>">Menara</a>
@@ -181,20 +182,22 @@
 	<br>
 	<div class=slideshow-container-art>
 		<div class=articlebox>		
-		Desa Wisata Teluk Buo merupakan desa taluak yang berlokasi Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang.<br> 
+		<center>Tetang Desa Wisata Teluk Buo:</center><br> 
+		Merupakan desa yang berlokasi Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang.<br> 
 		Desa Wisata Teluk Buo ini memiliki luas area 25,64 km2.<br> 
 		Jarak Desa Wisata Teluk Buo dari kantor kelurahan ke kantor kecamatan adalah 3 kilometer, ke balai kota adalah 30 kilometer, ke kantor gubernur 25 kilometer.<br>
-		Desa Wisata Teluk Buo terkenal sebagai kawasan objek taluak bahari karena memiliki teluk indah, pantai berpasir putih, dan hutan Mangrove yang eksotis untuk dijelajahi.<br>
+		Desa Wisata Teluk Buo terkenal sebagai kawasan objek wisata bahari karena memiliki teluk indah, pantai berpasir putih, dan hutan Mangrove yang eksotis untuk dijelajahi.<br>
 		Masyarakat Teluk Buo umumnya berprofesi sebagai nelayan dan berkebun. Pantai Teluk Buo ini memiliki keindahan yang dapat membuat berdecak kagum.<br> 
-		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi taluakwan.<br> 
-		Kawasan objek taluak bahari yang menawan ini berada tersembunyi di balik batu karang Teluk Buo.<br>
-		Keberagaman hutan mangrove di Desa Wisata Teluk Buo menjadi potensi daya tarik taluak yang dapat dikembangkan sebagai Ekotaluak Mangrove Teluk Buo. <br>
+		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi wisatawan.<br> 
+		Kawasan objek wisata bahari yang menawan ini berada tersembunyi di balik batu karang Teluk Buo.<br>
+		Keberagaman hutan mangrove di Desa Wisata Teluk Buo menjadi potensi daya tarik wisata yang dapat dikembangkan sebagai Ekowisata Mangrove Teluk Buo. <br>
 		Hutan Mangrove ini cukup   luas   dan padat sekitar 10 hektar. Jenis mangrove yang terdapat   dilokasi   ini   adalah; Rhizophora apiculata, Sonner atia alba, Avicenia cornicullatum,  Bruguiera  gymnorrhiza  dan Xylocarpus granatum.<br>
 		Desa Wisata Teluk Buo memiliki pemandangan aktivitas nelayan yang menarik untuk disaksikan, seperti terdapat sejumlah kapal nelayan berada di dekat keramba ikan Teluk Buo.<br> 
-		Hal itu semua menjadi daya tarik Desa Wisata Teluk Buo untuk dikunjungi oleh para taluakwan. keindahan alam laut dan hutan mangrove serta kehidupan masyarakat pesisir pantai
-		pantai yang berada di kawasan teluk buo sangat cocok untuk taluakwan untuk mandi snorkeling dan memancing serta menikmati keindahan serta makanan khas 
+		Hal itu semua menjadi daya tarik Desa Wisata Teluk Buo untuk dikunjungi oleh para wisatawan. keindahan alam laut dan hutan mangrove serta kehidupan masyarakat pesisir pantai
+		pantai yang berada di kawasan teluk buo sangat cocok untuk wisatawan untuk mandi snorkeling dan memancing serta menikmati keindahan serta makanan khas. 
 	</div>
 </div>
+<?php $this->load->view('post_container');?>
 
 
 

@@ -19,15 +19,17 @@
 </head>
 <body class=bg-body>
     <div class=fix-navbar>
-        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
-		<div class=logged-in>You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a></div>
-		
+        <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+		<div class=logged-in>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a>
+				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
+		</div>
 		<div class=shadowboxmin><h4>User List</h4></div>
 		
 		<div class=fix-menu>
 			<?php echo validation_errors(); ?>
 
-			<nav class="navbar-expand-md navbar-light">
+			<nav class="navbar-expand-lg navbar-light">
 		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,9 +55,6 @@
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
 				</li>
 			<?php else: 
 				redirect(base_url(''));	

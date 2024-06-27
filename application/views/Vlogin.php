@@ -17,27 +17,25 @@
 
 <body class="bg-body">
     <div class=fix-navbar>
-		<div class=shadowboxmin><h5>Login Page</h5></div> 
-		<a alt="Login Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+		<div class=shadowbox><h5>Login Page</h5></div> 
+		<a alt="Home href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
       
 
 		  <div class=fix-menu>
-			<nav class="navbar-expand-md navbar-light">
+			<nav class="navbar-expand-lg navbar-light">
 		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
             </button>
      
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="text-center navbar-nav mr-auto">
-			<?php if ($this->session->userdata("name") === Null):?>
-				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>" >Menara</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('register/add'); ?>">Register</a>
-				</li>
-			<?php endif; ?>
-			</div>
+				<ul class="text-center navbar-nav mr-auto">
+					<li class="nav-item">
+						<a href="<?php echo base_url(''); ?>" >Menara</a>
+					</li>
+					<li class="nav-item">
+						<a href="<?php echo base_url('register/add'); ?>">Register</a>
+					</li>
+				</div>
 			</nav>
 		</div>
 	</div>

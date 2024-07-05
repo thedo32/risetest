@@ -31,6 +31,12 @@
 					<a href="<?php echo base_url(''); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
 					<a href="<?php echo base_url('Login'); ?>">Login</a>
 				</li>
 			<?php else:?>
@@ -39,6 +45,9 @@
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>

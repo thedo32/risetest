@@ -45,6 +45,9 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				</li>
 				<li class="nav-item">

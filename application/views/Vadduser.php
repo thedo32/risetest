@@ -29,12 +29,18 @@
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
 					<a href="<?php echo base_url(''); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -81,3 +87,5 @@
             </tr>
         </table>
     </form>
+
+

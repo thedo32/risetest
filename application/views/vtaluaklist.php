@@ -16,6 +16,8 @@
 </script>
 
 
+   
+
 </head>
 
 <body class="bg-body">
@@ -51,12 +53,18 @@
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
 					<a href="<?php echo base_url(''); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -175,29 +183,56 @@
             </div>
         </div>
     </div>
+
+	 
+
 	<br>
     <?php echo $this->pagination->create_links(); 
 			   $this->load->view('image_slider');
 	?>
 	<br>
-	<div class=slideshow-container-art>
-		<div class=articlebox>		
-		<center>Tetang Desa Wisata Teluk Buo:</center><br> 
-		Merupakan desa yang berlokasi Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang.<br> 
-		Desa Wisata Teluk Buo ini memiliki luas area 25,64 km2.<br> 
-		Jarak Desa Wisata Teluk Buo dari kantor kelurahan ke kantor kecamatan adalah 3 kilometer, ke balai kota adalah 30 kilometer, ke kantor gubernur 25 kilometer.<br>
-		Desa Wisata Teluk Buo terkenal sebagai kawasan objek wisata bahari karena memiliki teluk indah, pantai berpasir putih, dan hutan Mangrove yang eksotis untuk dijelajahi.<br>
-		Masyarakat Teluk Buo umumnya berprofesi sebagai nelayan dan berkebun. Pantai Teluk Buo ini memiliki keindahan yang dapat membuat berdecak kagum.<br> 
+	<div class=slideshow-container-art>  
+	  <div class=articlebox>		
+		<center><h6>Tetang Desa Wisata Teluk Buo:</h6></center>
+		Berlokasi di Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang, Propinsi Sumatera Barat<br> 
+		Desa Wisata Teluk Buo ini memiliki luas area 25,64 km2.<br>
+		Jarak dari kantor kelurahannya ke kantor kecamatan 3 kilometer, ke balai kota 30 kilometer, ke kantor gubernur 25 kilometer.<br>
+		<strong>Desa Wisata Teluk Buo berhasil menembus 100 besar Anugerah Desa Wisata Indonesia (ADWI) tahun 2024.</strong><br>
+		Merupakan kawasan objek wisata bahari karena memiliki teluk indah, pantai berpasir putih, dan hutan Mangrove yang eksotis.<br>
 		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi wisatawan.<br> 
 		Kawasan objek wisata bahari yang menawan ini berada tersembunyi di balik batu karang Teluk Buo.<br>
-		Keberagaman hutan mangrove di Desa Wisata Teluk Buo menjadi potensi daya tarik wisata yang dapat dikembangkan sebagai Ekowisata Mangrove Teluk Buo. <br>
-		Hutan Mangrove ini cukup   luas   dan padat sekitar 10 hektar. Jenis mangrove yang terdapat   dilokasi   ini   adalah; Rhizophora apiculata, Sonner atia alba, Avicenia cornicullatum,  Bruguiera  gymnorrhiza  dan Xylocarpus granatum.<br>
-		Desa Wisata Teluk Buo memiliki pemandangan aktivitas nelayan yang menarik untuk disaksikan, seperti terdapat sejumlah kapal nelayan berada di dekat keramba ikan Teluk Buo.<br> 
-		Hal itu semua menjadi daya tarik Desa Wisata Teluk Buo untuk dikunjungi oleh para wisatawan. keindahan alam laut dan hutan mangrove serta kehidupan masyarakat pesisir pantai
-		pantai yang berada di kawasan teluk buo sangat cocok untuk wisatawan untuk mandi snorkeling dan memancing serta menikmati keindahan serta makanan khas. 
-	</div>
-</div>
+		Keberagaman hutan mangrove menjadikannya daya tarik wisata yang dikembangkan sebagai Ekowisata Mangrove Teluk Buo. <br>
+		Hutan Mangrove ini cukup luas dan padat sekitar 10 hektar. Jenis mangrove yang terdapat   dilokasi   ini   adalah:<br> 
+		Rhizophora apiculata, Sonner atia alba, Avicenia cornicullatum,  Bruguiera  gymnorrhiza  dan Xylocarpus granatum.<br>
+		Desa Wisata Teluk Buo memiliki aktivitas nelayan yang menarik untuk disaksikan.<br> 
+		Hal itu semua menjadi daya tarik Desa Wisata Teluk Buo untuk dikunjungi oleh para wisatawan yakni,<br> 
+		keindahan alam laut dan hutan mangrove serta kehidupan masyarakat pesisir pantai<br>
+		Kawasan untuk kegiatan berenang, snorkeling, memancing, dan menikmati keindahan alam serta kuliner khas daerah.
+	  </div>
+    </div>
 <?php $this->load->view('post_container');?>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
+
+    <script>
+        $(document).ready(function() {
+            // When the user scrolls down 20px from the top of the document, show the button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 20) {
+                    $('#myBtn').fadeIn();
+                } else {
+                    $('#myBtn').fadeOut();
+                }
+            });
+
+            // When the user clicks on the button, scroll to the top of the document
+            $('#myBtn').click(function() {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+        });
+    </script>
 
 
 

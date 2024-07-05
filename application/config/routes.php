@@ -85,3 +85,10 @@ $route['taluak/edit/(:num)'] = 'taluak/edit/$1';
 $route['taluak/delete/(:num)'] = 'taluak/delete/$1'; 
 $route['taluak/index'] = 'taluak/index'; 
 $route['taluak/view'] = 'taluak/view';
+
+$route['painan'] = 'painan/index'; 
+$route['painan/add'] = 'painan/add';
+$route['painan/edit/(:num)'] = 'painan/edit/$1'; 
+$route['painan/delete/(:num)'] = 'painan/delete/$1'; 
+$route['painan/index'] = 'painan/index'; 
+$route['painan/view'] = 'painan/view';

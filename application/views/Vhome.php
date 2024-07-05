@@ -37,6 +37,9 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				</li>
 				<li class="nav-item">
@@ -59,6 +62,9 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				</li>
 				<li class="nav-item">
@@ -67,7 +73,8 @@
 			<?php endif; ?>
 			</div>
 			</nav>
-		</div>		
+		</div>
+	</div>		
 	<div class = home-table>
 	<?php if ($this->session->userdata("name") === 'Alpha' ):?>
 			<h6>Welcome <a href="<?php echo base_url('home'); ?>">Admin</a></h6>

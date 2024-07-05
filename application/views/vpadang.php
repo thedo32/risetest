@@ -34,12 +34,18 @@
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
 					<a href="<?php echo base_url(''); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -59,6 +65,9 @@
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -83,7 +92,24 @@
 			</tr>
 		</tbody>		
 	</table>
-		
 
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 
+    <script>
+        $(document).ready(function() {
+            // When the user scrolls down 20px from the top of the document, show the button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 20) {
+                    $('#myBtn').fadeIn();
+                } else {
+                    $('#myBtn').fadeOut();
+                }
+            });
 
+            // When the user clicks on the button, scroll to the top of the document
+            $('#myBtn').click(function() {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+        });
+    </script>

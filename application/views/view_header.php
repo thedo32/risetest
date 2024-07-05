@@ -8,8 +8,9 @@
 				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
+
 				<!-- css script to load -->
-				 <!--  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>../public/assets/css/tailwind.css"> -->
+				 <!--  <link rel="stylesheet" type="text/css" href=" php echo base_url(); ?>../public/assets/css/tailwind.css"> -->
 				
 
               	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>../extension/css/app.css">

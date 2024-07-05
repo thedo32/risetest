@@ -174,14 +174,26 @@ h6, .h6 {
 }
 
 .h7 {
-	z-index:99;
-	font-family:'Bungee Spice',sans-serif;
-	font-size:1.3em;
+	z-index: 99;
+	font-family: 'Bungee Spice',sans-serif;
+	padding: 40px 10px 15px 10px;
+	border-radius: 0 0 17px 17px;
+	background-color: white;
+	font-size: 1.3em;
 }
 
 .h8 {
 	z-index: 99;
 	font-family: "Monoton", sans-serif;
+	font-size: 0.8em;
+}
+
+.h9 {
+	z-index: 99;
+	font-family: 'Bungee Spice',sans-serif;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px;
+	background-color: white;
 	font-size: 0.8em;
 }
 
@@ -270,7 +282,7 @@ a {
 	color: var(--bs-link-color);
 	text-decoration: none;
 	padding:0 5px 0 5px;
-	font-size: 0.75em;
+	font-size:0.9em;
 }
 
 	a:hover {
@@ -4256,6 +4268,8 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     transition: none;
@@ -12442,24 +12456,23 @@ textarea.form-control-lg {
 
 /* go top button */
 #myBtn {
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	z-index: 98;
-	font-size: 15px;
-	border: none;
-	outline: none;
-	background-color: red;
-	color: white;
-	cursor: pointer;
-	padding: 10px;
-	border-radius: 4px;
-	opacity: 0.5;
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed position */
+	bottom: 30px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 1000; /* Make sure it does not overlap */
+	font-size: 28px; /* Increase font size */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #dc35458c; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
 }
 
 	#myBtn:hover {
-		background-color: #555;
+		background-color: #555; /* Add a dark-grey background on hover */
 	}
 /*end of go top button */
 
@@ -12551,7 +12564,7 @@ textarea.form-control-lg {
 	margin-bottom: 50px;
 	position: fixed;
 	overflow: hidden;
-	background-image: url('/storage/app/public/images/bg/background.png');
+	background-image: url('/storage/app/public/images/bg/background1.png');
 	top: 0; /* Position the navbar at the top of the page */
 	width: 100%; /* Full width */
 	z-index: 99;
@@ -12604,7 +12617,7 @@ img {
 .mySlidesImg {
 	display: none;
 	opacity: 0;
-	transition: ease 2s;
+	transition: ease 1.4s;
 }
 
 	.mySlidesImg img {
@@ -12615,7 +12628,7 @@ img {
 .slideshow-container {
 	max-width: 600px;
 	position: relative;
-	padding-top: 30px;
+	padding-top: 50px;
 	margin-top: 110px;
 	margin-bottom: 20px;
 	margin-right: auto;
@@ -12660,11 +12673,11 @@ img {
 
 	.slideshow-container-art:hover {
 		transition: ease 2s;
-		transform: scale(1.25);
+		transform: scale(1.5);
 		opacity:0.8;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top:-430px;
+		margin-top:-300px;
 	}
 
 /* Next & previous buttons */
@@ -12762,14 +12775,14 @@ img {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 500px) {
 	.prev, .next, .text {
-		font-size: 10px
+		font-size: 10px;
 	}
 
-	.slideshow-container {
-		margin-top: 280px
-	}
+	/*.slideshow-container {
+		margin-top: 320px
+	}*/
 
-	;
+	
 }
 
 /*end of barajacoding */
@@ -12778,16 +12791,16 @@ img {
 
 .admin-table {
 	vertical-align: middle;
-	max-width:85%
+	max-width:85%;
 	box-shadow: 0 3px lightgrey;
 }
 .home-table {
 	padding: 40px;
-	margin-top: 105px;
+	margin-top: 135px;
 }
 
 .user-table {
-	margin: 130px 0 0 50px;
+	margin: 150px 0 0 50px;
 }
 
 	.user-table td {
@@ -12802,7 +12815,7 @@ img {
 	}
 
 .reg-table {
-	margin: 130px 0 0 50px;
+	margin: 150px 0 0 50px;
 }
 
 	.reg-table td {
@@ -12823,7 +12836,7 @@ img {
 }
 
 .login-table {
-	margin-top:130px;
+	margin-top:150px;
 
 }
 	.login-table td {
@@ -12836,7 +12849,7 @@ img {
 	}
 
 .read-table {
-	margin-top: 110px;
+	margin-top: 150px;
 }
 
 	.read-table td {
@@ -12855,10 +12868,21 @@ img {
 
 	.news-table td {
 		width: 50%;
-		vertical-align:middle;
+		vertical-align: middle;
 		padding: 5px 5px 15px 5px;
+		text-align: center;
 	}
 
+		.news-table td:hover {
+			transform: scale(1.08);
+			transition: 1s ease-in-out;
+		}
+
+		.news-table td:not(:hover) {
+			width: 25%;
+		}
+
+			
 
 .newsbox {
 	border: inset;
@@ -12871,6 +12895,15 @@ img {
 	margin: 0 auto 0 auto;
 	z-index: 99;
 }
+	/*.newsbox:hover {
+		transform: scale(1.2);*/ /* Enlarge the image */
+		/*transition: 0.5s ease-in-out;
+	}*/
+
+	/*	.newsbox:hover ~ .newsbox {
+			width: 25%;
+			left: 75%;
+		}*/
 
 .articlebox {
 	border: inset;
@@ -12880,7 +12913,7 @@ img {
 	padding: 5px 5px 5px 5px;
 	width: 80%;
 	background-color:#ffffff;
-	text-align:justify;
+	text-align:justify-all;
 	margin: 10px auto 0 auto;
 	z-index: 99;
 }
@@ -13006,7 +13039,7 @@ img {
 	flex-direction: row-reverse;
 	justify-content:center;
 	color: var(--bs-link-color);
-	width: 25%;
+	width: 50%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13018,7 +13051,7 @@ img {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	width: 25%;
+	width: 50%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13030,7 +13063,7 @@ img {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	width: 25%;
+	width: 50%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13042,7 +13075,7 @@ img {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	width: 25%;
+	width: 50%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;

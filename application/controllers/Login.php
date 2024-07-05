@@ -41,7 +41,7 @@ class Login extends CI_Controller {
 		
         } else {
             // Invalid credentials
-			$this->session->set_tempdata('error_login', 'Invalid username or password, please login again or register');
+			$this->session->set_tempdata('error_login', 'Invalid username or password, Login again or register');
 			
 			
             //to login page

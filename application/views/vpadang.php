@@ -20,7 +20,7 @@
 		
 
 		<div class=fix-menu>
-			<nav class="navbar-expand-md navbar-light">
+			<nav class="navbar-expand-lg navbar-light">
 		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -96,6 +96,7 @@
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 
     <script>
+		// for go to top button
         $(document).ready(function() {
             // When the user scrolls down 20px from the top of the document, show the button
             $(window).scroll(function() {
@@ -112,4 +113,8 @@
                 return false;
             });
         });
-    </script>
+
+		// for expand and collapse below navbar
+		shiftBelowRTable();
+
+	</script>

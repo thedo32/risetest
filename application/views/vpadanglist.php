@@ -101,6 +101,8 @@
 			</nav>
 		</div>
 	</div>
+	
+
 	<?php $this->load->view("header_slider");
 		  // $this->load->view('side_post');
 	?>
@@ -224,7 +226,12 @@
                 return false;
             });
         });
-    </script>
+
+
+	// for expand and collapse below navbar
+	 shiftBelowSlide();
+
+	</script>
 
 
 

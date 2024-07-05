@@ -223,6 +223,10 @@
                 return false;
             });
         });
+
+	// for expand and collapse below navbar
+	 shiftBelowSlide();
+
     </script>
 
 

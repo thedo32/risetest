@@ -109,4 +109,9 @@
     <br>
     <?php echo $this->pagination->create_links(); ?>
     <br>
+
+	<script>
+		// for expand and collapse below navbar
+		shiftBelowUTable();
+	</script>
 	

@@ -110,6 +110,10 @@
                 return false;
             });
         });
+
+		// for expand and collapse below navbar
+		shiftBelowRTable();
+
     </script>
 		
 

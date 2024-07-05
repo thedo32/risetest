@@ -92,4 +92,11 @@
         </table>
 
     </form>
-    <br />
+    <br>
+
+<script>
+
+	// for expand and collapse below navbar
+	shiftBelowLTable();
+
+</script>

@@ -99,3 +99,81 @@ function fadeOut(element) {
 		opacity -= interval / duration;
 	}, interval);
 }
+
+// for expand and collapse below navbar slide
+function shiftBelowSlide() {
+	document.addEventListener("DOMContentLoaded", function () {
+		var navbarToggler = document.querySelector('.navbar-toggler');
+		var slideShow = document.querySelector('.slideshow-container');
+
+		navbarToggler.addEventListener('click', function () {
+			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+				slideShow.style.marginTop = '110px';
+			} else {
+				slideShow.style.marginTop = '255px'; // Adjust this value based on the height of the navbar when expanded
+			}
+		});
+	});
+}
+
+// for expand and collapse below navbar table
+
+function shiftBelowRTable() {
+	document.addEventListener("DOMContentLoaded", function () {
+		var navbarToggler = document.querySelector('.navbar-toggler');
+		var readTable = document.querySelector('.read-table');
+
+		navbarToggler.addEventListener('click', function () {
+			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+				readTable.style.marginTop = '150px';
+			} else {
+				readTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+			}
+		});
+	});
+}
+
+function shiftBelowLTable() {
+	document.addEventListener("DOMContentLoaded", function () {
+		var navbarToggler = document.querySelector('.navbar-toggler');
+		var loginTable = document.querySelector('.login-table');
+
+		navbarToggler.addEventListener('click', function () {
+			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+				loginTable.style.marginTop = '150px';
+			} else {
+				loginTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+			}
+		});
+	});
+}
+
+function shiftBelowHTable() {
+	document.addEventListener("DOMContentLoaded", function () {
+		var navbarToggler = document.querySelector('.navbar-toggler');
+		var homeTable = document.querySelector('.home-table');
+
+		navbarToggler.addEventListener('click', function () {
+			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+				homeTable.style.marginTop = '150px';
+			} else {
+				homeTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+			}
+		});
+	});
+}
+
+function shiftBelowUTable() {
+	document.addEventListener("DOMContentLoaded", function () {
+		var navbarToggler = document.querySelector('.navbar-toggler');
+		var userTable = document.querySelector('.user-table');
+
+		navbarToggler.addEventListener('click', function () {
+			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
+				userTable.style.marginTop = '150px';
+			} else {
+				userTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+			}
+		});
+	});
+}

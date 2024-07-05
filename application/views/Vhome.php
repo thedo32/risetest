@@ -88,3 +88,7 @@
 	<?php $this->load->view('view_footer');
 	?>
 	
+	<script>
+		// for expand and collapse below navbar
+		shiftBelowHTable();
+	</script>

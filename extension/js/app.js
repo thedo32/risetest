@@ -105,12 +105,13 @@ function shiftBelowSlide() {
 	document.addEventListener("DOMContentLoaded", function () {
 		var navbarToggler = document.querySelector('.navbar-toggler');
 		var slideShow = document.querySelector('.slideshow-container');
+		var Navbar = document.querySelector('.fix-navbar');
 
 		navbarToggler.addEventListener('click', function () {
 			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
 				slideShow.style.marginTop = '110px';
 			} else {
-				slideShow.style.marginTop = '255px'; // Adjust this value based on the height of the navbar when expanded
+				slideShow.style.marginTop = 110 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
 			}
 		});
 	});
@@ -122,12 +123,14 @@ function shiftBelowRTable() {
 	document.addEventListener("DOMContentLoaded", function () {
 		var navbarToggler = document.querySelector('.navbar-toggler');
 		var readTable = document.querySelector('.read-table');
+		var Navbar = document.querySelector('.fix-navbar');
+		
 
 		navbarToggler.addEventListener('click', function () {
 			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
 				readTable.style.marginTop = '150px';
 			} else {
-				readTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+				readTable.style.marginTop = 110 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
 			}
 		});
 	});
@@ -137,12 +140,13 @@ function shiftBelowLTable() {
 	document.addEventListener("DOMContentLoaded", function () {
 		var navbarToggler = document.querySelector('.navbar-toggler');
 		var loginTable = document.querySelector('.login-table');
+		var Navbar = document.querySelector('.fix-navbar');
 
 		navbarToggler.addEventListener('click', function () {
 			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
 				loginTable.style.marginTop = '150px';
 			} else {
-				loginTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+				loginTable.style.marginTop = 110 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
 			}
 		});
 	});
@@ -152,12 +156,13 @@ function shiftBelowHTable() {
 	document.addEventListener("DOMContentLoaded", function () {
 		var navbarToggler = document.querySelector('.navbar-toggler');
 		var homeTable = document.querySelector('.home-table');
+		var Navbar = document.querySelector('.fix-navbar');
 
 		navbarToggler.addEventListener('click', function () {
 			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
 				homeTable.style.marginTop = '150px';
 			} else {
-				homeTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+				homeTable.style.marginTop = 110 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
 			}
 		});
 	});
@@ -167,12 +172,13 @@ function shiftBelowUTable() {
 	document.addEventListener("DOMContentLoaded", function () {
 		var navbarToggler = document.querySelector('.navbar-toggler');
 		var userTable = document.querySelector('.user-table');
+		var Navbar = document.querySelector('.fix-navbar');
 
 		navbarToggler.addEventListener('click', function () {
 			if (document.querySelector('.navbar-collapse').classList.contains('show')) {
 				userTable.style.marginTop = '150px';
 			} else {
-				userTable.style.marginTop = '295px'; // Adjust this value based on the height of the navbar when expanded
+				userTable.style.marginTop = 110 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
 			}
 		});
 	});

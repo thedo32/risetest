@@ -13040,7 +13040,7 @@ img {
 	flex-direction: row-reverse;
 	justify-content:center;
 	color: var(--bs-link-color);
-	width: 50%;
+	width: 75%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13064,7 +13064,7 @@ img {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	width: 50%;
+	width: 75%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13076,7 +13076,7 @@ img {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	width: 50%;
+	width: 75%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;

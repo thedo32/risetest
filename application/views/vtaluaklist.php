@@ -193,7 +193,7 @@
 	<br>
 	<div class=slideshow-container-art>  
 	  <div class=articlebox>		
-		<center><h6>Tetang Desa Wisata Teluk Buo:</h6></center>
+		<center><h6>Tentang Desa Wisata Teluk Buo:</h6></center>
 		Berlokasi di Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang, Propinsi Sumatera Barat<br> 
 		Desa Wisata Teluk Buo ini memiliki luas area 25,64 km2.<br>
 		Jarak dari kantor kelurahannya ke kantor kecamatan 3 kilometer, ke balai kota 30 kilometer, ke kantor gubernur 25 kilometer.<br>

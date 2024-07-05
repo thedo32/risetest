@@ -23,31 +23,40 @@
         Mendengar suara deburan ombak jiwa yang lelah tidur nyenyak diiringi nyanyian alam sungguh indah sangat menawan
     </div>
 	<div class="mySlidesImg">
-        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo5.jpg");?>" style="width:80%"><br>
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo5.png");?>" style="width:80%"><br>
         Semburatnya nan jingga Berkelumat dengan hitam Membaur dengan gelap Lenyap bersama 
     </div>
 
     <div class="mySlidesImg">
-        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo6.jpg");?>" style="width:80%"><br>
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo6.png");?>" style="width:80%"><br>
         Kulepaskan pandanganku Jauh ke Ujung lautan ke Ujung pelangi Betapa luas alam semesta
     </div>
 	<div class="mySlidesImg">
-        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo7.jpg");?>" style="width:80%"><br>
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo7.png");?>" style="width:80%"><br>
         Deru ombak menghantam bebatuan Bisikan angin memecahkan suasana pilu Terlebih lagi ada cahaya indah di hadapan
     </div>
 
     <div class="mySlidesImg">
-        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo8.jpg");?>" style="width:80%"><br>
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo8.png");?>" style="width:80%"><br>
         Mendengar suara deburan ombak jiwa yang lelah tidur nyenyak diiringi nyanyian alam sungguh indah sangat menawan
     </div>
 	
     <div class="mySlidesImg">
-        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo9.jpg");?>" style="width:80%"><br>
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo9.png");?>" style="width:80%"><br>
         Deru ombak menghantam bebatuan Bisikan angin memecahkan suasana pilu Terlebih lagi ada cahaya indah di hadapan
     </div>
 
     <div class="mySlidesImg">
-        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbu10.jpg");?>" style="width:80%"><br>
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo10.png");?>" style="width:80%"><br>
+        Mendengar suara deburan ombak jiwa yang lelah tidur nyenyak diiringi nyanyian alam sungguh indah sangat menawan
+    </div>
+	 <div class="mySlidesImg">
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo11.png");?>" style="width:80%"><br>
+        Deru ombak menghantam bebatuan Bisikan angin memecahkan suasana pilu Terlebih lagi ada cahaya indah di hadapan
+    </div>
+
+    <div class="mySlidesImg">
+        <img src="<?php echo base_url ("/storage/app/public/images/slider/taluakbuo12.png");?>" style="width:80%"><br>
         Mendengar suara deburan ombak jiwa yang lelah tidur nyenyak diiringi nyanyian alam sungguh indah sangat menawan
     </div>
 </div>

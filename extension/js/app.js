@@ -117,8 +117,8 @@ function shiftBelowSlide() {
 	});
 }
 
-// for expand and collapse below navbar table
 
+// for expand and collapse below navbar table
 function shiftBelowRTable() {
 	document.addEventListener("DOMContentLoaded", function () {
 		var navbarToggler = document.querySelector('.navbar-toggler');

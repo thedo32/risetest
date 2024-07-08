@@ -105,6 +105,12 @@
 		  // $this->load->view('side_post');
 	?>
 
+	<div class=h10> 
+		<a href="https://en.kopibatigo.id/painan">ENG</a><br>
+		<a href="#" class="fa fa-instagram"></a><br>
+		<a href="#" class="fa fa-facebook"></a><br>
+	</div>
+
 	<!-- notification if add or edit news success-->
     <?php if ($this->session->tempdata('add_success')): ?>
     <p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('add_success'); ?></p>
@@ -186,22 +192,25 @@
 	<div class=slideshow-container-art>  
 	  <div class=articlebox>		
 		<center><h6>Tentang Desa Wisata Teluk Buo:</h6></center>
-		Berlokasi di Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang, Propinsi Sumatera Barat<br> 
-		Desa Wisata Teluk Buo ini memiliki luas area 25,64 km2.<br>
-		Jarak dari kantor kelurahannya ke kantor kecamatan 3 kilometer, ke balai kota 30 kilometer, ke kantor gubernur 25 kilometer.<br>
+		Terletak di Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang, Provinsi Sumatera Barat, Indonesia.<br>
 		<strong>Desa Wisata Teluk Buo berhasil menembus 100 besar Anugerah Desa Wisata Indonesia (ADWI) tahun 2024.</strong><br>
-		Merupakan kawasan objek wisata bahari karena memiliki teluk indah, pantai berpasir putih, dan hutan Mangrove yang eksotis.<br>
-		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi wisatawan.<br> 
-		Kawasan objek wisata bahari yang menawan ini berada tersembunyi di balik batu karang Teluk Buo.<br>
-		Keberagaman hutan mangrove menjadikannya daya tarik wisata yang dikembangkan sebagai Ekowisata Mangrove Teluk Buo. <br>
-		Hutan Mangrove ini cukup luas dan padat sekitar 10 hektar. Jenis mangrove yang terdapat   dilokasi   ini   adalah:<br> 
-		Rhizophora apiculata, Sonner atia alba, Avicenia cornicullatum,  Bruguiera  gymnorrhiza  dan Xylocarpus granatum.<br>
-		Desa Wisata Teluk Buo memiliki aktivitas nelayan yang menarik untuk disaksikan.<br> 
-		Hal itu semua menjadi daya tarik Desa Wisata Teluk Buo untuk dikunjungi oleh para wisatawan yakni,<br> 
-		keindahan alam laut dan hutan mangrove serta kehidupan masyarakat pesisir pantai<br>
-		Kawasan untuk kegiatan berenang, snorkeling, memancing, dan menikmati keindahan alam serta kuliner khas daerah.
+		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi wisatawan.<br>
+		Kawasan wisata bahari yang menawan ini tersembunyi di balik batu karang Teluk Buo.<br>
+		Keberagaman hutan mangrove menjadikannya sebagai Ekowisata Mangrove yang menyegarkan.<br>
+		<strong>Jenis mangrove di lokasi ini adalah:</strong><br>
+		Rhizophora apiculate, Sonneratia alba, Avicennia corniculatum, Bruguiera gymnorhiza, dan Xylocarpus granatum <br>
+		Desa Wisata Teluk Buo juga memiliki aktivitas nelayan yang menarik untuk disaksikan.<br>
+		<strong>Atraksi utama:</strong><br>
+		Teluk yang indah dan pantai berpasir putih, Ekowisata Mangrove, Aktivitas nelayan, Berenang, snorkeling, dan memancing, serta Kuliner khas daerah<br>
+		<strong>Cara menuju ke sana:</strong><br>
+		Desa Wisata Teluk Buo terletak sekitar 30 kilometer dari Pusat Kota Padang, bisa menggunakan transportasi umum atau menyewa mobil untuk sampai ke sana.<br>
+		<strong>Penginapan:</strong><br>
+		Terdapat beberapa homestay dan guest house yang tersedia di Desa Wisata Teluk Buo, termasuk Homestay dan Camping Ground Kupibatigo Taluak Buo<br>
+		<strong>Tips:</strong><br>
+		Bawa tabir surya, lotion anti nyamuk, topi, jangan lupa hormati budaya dan lingkungan setempat.
 	  </div>
     </div>
+
 <?php $this->load->view('post_container');?>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>

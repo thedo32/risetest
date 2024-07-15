@@ -101,7 +101,7 @@ class Mpadang extends CI_Model {
 
         $this->db->insert('hits', $data);
 
-            // Increment the hit count in the padang table
+		  // Increment the hit count in the padang table
             $this->db->where('id', $id);
             $this->db->set('hit_count', 'hit_count+1', FALSE);
             $this->db->update('padang');

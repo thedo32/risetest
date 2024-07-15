@@ -101,7 +101,7 @@ class Mtaluak extends CI_Model {
 
         $this->db->insert('hits', $data);
 
-            // Increment the hit count in the taluak table
+		 // Increment the hit count in the taluak table
             $this->db->where('id', $id);
             $this->db->set('hit_count', 'hit_count+1', FALSE);
             $this->db->update('taluak');

@@ -30,8 +30,8 @@
 				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8><?php echo $this->session->userdata("name"); ?></a>
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		<?php else:?> 
-				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>
-		<?php endif; ?>
+				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>	
+		<?php endif; ?>	
 		</div>
 		
 		<div class=fix-menu>
@@ -44,17 +44,23 @@
 			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === Null):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>" >Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
@@ -79,13 +85,16 @@
 				</li>
 			<?php else: ?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -101,13 +110,13 @@
 			</nav>
 		</div>
 	</div>
-	
-	
+
 	<?php $this->load->view("header_slider");
 		  // $this->load->view('side_post');
 	?>
+
 	<div class=h10> 
-		<a href="https://en.kopibatigo.id/">ENG</a><br>
+		<a href="https://en.kopibatigo.id/padang">ENG</a><br>
 		<a href="#" class="fa fa-instagram"></a><br>
 		<a href="#" class="fa fa-facebook"></a><br>
 	</div>
@@ -214,7 +223,6 @@
 
 <?php $this->load->view('post_container');?>
 
-
 <button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 
     <script>
@@ -235,17 +243,10 @@
             });
         });
 
-
 	// for expand and collapse below navbar
 	 shiftBelowSlide();
 
-	</script>
-
-
-
-
-
-
+    </script>
 
 
 

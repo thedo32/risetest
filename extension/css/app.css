@@ -12901,9 +12901,10 @@ img {
 }
 
 .home-table {
-	padding: 40px;
-	margin-top: 135px;
+	padding: 0 0 0 40px;
+	margin-top: 50px;
 	transition: margin-top 1.5s;
+	width:95%;
 }
 
 .user-table {

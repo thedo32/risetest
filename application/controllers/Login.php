@@ -30,6 +30,7 @@ class Login extends CI_Controller {
         if ($user && password_verify($password, $user->password)) {
             // Set session data
             $data_session = array(
+				'id' => $user->id,
                 'name' => $username,
                 'status' => "login"
             );

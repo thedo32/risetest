@@ -39,7 +39,7 @@
 			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>

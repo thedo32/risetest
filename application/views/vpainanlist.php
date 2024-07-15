@@ -20,7 +20,7 @@
 <body class="bg-body">
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
-	<div class=shadowbox><h5>Kupi Batigo Menara</h5></div> 
+	<div class=shadowbox><h5>Rumah Puti Painan</h5></div> 
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
@@ -44,17 +44,23 @@
 			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === Null):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>" >Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
@@ -79,13 +85,16 @@
 				</li>
 			<?php else: ?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -101,6 +110,7 @@
 			</nav>
 		</div>
 	</div>
+
 	<?php $this->load->view("header_slider");
 		  // $this->load->view('side_post');
 	?>

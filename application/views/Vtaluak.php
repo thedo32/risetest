@@ -28,17 +28,23 @@
 			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === Null):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>" >Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
@@ -58,21 +64,30 @@
 				<li class="nav-item">
 					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
 				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				</li>
 			<?php else: ?>
 				<li class="nav-item">
-					<a href="<?php echo base_url(''); ?>">Menara</a>
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>">Menara</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
 				</li>
 			<?php endif; ?>
 			</div>
@@ -87,6 +102,9 @@
 				</tr>
 				<tr>
 					<td><?php echo htmlspecialchars_decode(set_value('text', $taluak->text)); ?></td>
+				</tr>
+				<tr>
+					<td>Visitor Location: <?php echo $city; ?>, <?php echo $country; ?></p></td>
 				</tr>
 		</tbody>
 	</table>

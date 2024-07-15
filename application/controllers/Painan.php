@@ -1,4 +1,7 @@
 <?php
+
+use GeoIp2\Database\Reader;
+
 class Painan extends CI_Controller {
     
     public function __construct() {
@@ -172,6 +175,32 @@ class Painan extends CI_Controller {
         {
                 show_404();
         }
+
+		  // Increment hit count
+        $this->load->library('user_agent');
+        $ip_address = $this->input->ip_address();
+
+		if ($this->session->userdata("name") != Null ){
+			$user_id = $user_id = $this->session->userdata("id");
+		}else{
+			$user_id = 0;
+		}	
+	    $this->Mpainan->increment_hit_count($slug, $user_id, $data['painan']->id, $ip_address);
+
+
+
+		// Get city and country based on IP address
+        require_once 'vendor/autoload.php';
+        $reader = new Reader('extension/db/GeoLite2-City.mmdb');
+        try {
+            $record = $reader->city($ip_address);
+            $data['city'] = $record->city->name;
+            $data['country'] = $record->country->name;
+        } catch (Exception $e) {
+            $data['city'] = 'Unknown';
+            $data['country'] = 'Unknown';
+        }
+
 
         // $data['title'] = $data['painan_item']['title'];
 

@@ -136,6 +136,20 @@ class Taluak extends CI_Controller {
 
 		 // $this->check_login(); // Check if taluak is logged in
 
+	 // Increment hit count
+        $this->load->library('user_agent');
+        $ip_address = $this->input->ip_address();
+
+		if ($this->session->userdata("name") != Null ){
+			$user_id = $user_id = $this->session->userdata("id");
+		}else{
+			$user_id = 0;
+		}
+
+		$art_id=0;
+		$title="Taluak";
+	    $this->Mtaluak->increment_hit_count($title, $user_id, $art_id, $ip_address);
+
     // Pagination configuration
 		$config['base_url'] = base_url('taluak/index');
 		$config['total_rows'] = $this->Mtaluak->get_total_taluak();
@@ -184,8 +198,10 @@ class Taluak extends CI_Controller {
 			$user_id = $user_id = $this->session->userdata("id");
 		}else{
 			$user_id = 0;
-		}	
-	    $this->Mtaluak->increment_hit_count($slug, $user_id, $data['taluak']->id, $ip_address);
+		}
+		
+		$title = $data['taluak']->title;
+	    $this->Mtaluak->increment_hit_count($title, $user_id, $data['taluak']->id, $ip_address);
 
 
 

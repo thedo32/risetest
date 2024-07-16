@@ -53,16 +53,16 @@ class Mtaluak extends CI_Model {
     }
 
 
-	public function increment_hit_count($slug, $user_id, $id, $ip_address) {
+	public function increment_hit_count($title, $user_id, $id, $ip_address) {
     // Check if the IP address has already hit this entry within the last week
     $query = $this->db->get_where('hits', array(
         'art_id' => $id,
         'user_id' => $user_id,
-        'slug' => $slug,
+        'title' => $title,
         'ip_address' => $ip_address
     ));
 
-    if ($query->num_rows() == 0 || (strtotime(date('Y-m-d H:i:s')) - strtotime($query->row()->hit_time)) >= 604800) {
+    if ($query->num_rows() == 0 || (strtotime(date('Y-m-d H:i:s')) - strtotime($query->row()->hit_time)) >= 2592000) {
         // Use GeoIP2 library to get city and country
         require_once 'vendor/autoload.php';
         $reader = new Reader('extension/db/GeoLite2-City.mmdb');
@@ -82,7 +82,7 @@ class Mtaluak extends CI_Model {
 			$data = array(
 				'art_id' => $id,
 				'user_id' => $user_id,
-				'slug' => $slug,
+				'title' => $title,
 				'ip_address' => $ip_address,
 				'hit_time' => date('Y-m-d H:i:s'),
 				'city' => $city,
@@ -91,7 +91,7 @@ class Mtaluak extends CI_Model {
 		}else{
 			$data = array(
 				'art_id' => $id,
-				'slug' => $slug,
+				'title' => $title,
 				'ip_address' => $ip_address,
 				'hit_time' => date('Y-m-d H:i:s'),
 				'city' => $city,
@@ -102,9 +102,9 @@ class Mtaluak extends CI_Model {
         $this->db->insert('hits', $data);
 
 		 // Increment the hit count in the taluak table
-            $this->db->where('id', $id);
-            $this->db->set('hit_count', 'hit_count+1', FALSE);
-            $this->db->update('taluak');
+         //$this->db->where('id', $id);
+         //$this->db->set('hit_count', 'hit_count+1', FALSE);
+         //$this->db->update('taluak');
         }
     }	
 }

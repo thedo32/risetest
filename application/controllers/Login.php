@@ -4,7 +4,7 @@ class Login extends CI_Controller {
     
     function __construct() {
         parent::__construct();
-        $this->load->model('mlogin'); // Ensure the mlogin model is loaded
+        $this->load->model('Mlogin'); // Ensure the mlogin model is loaded
         $this->load->library('form_validation'); // Load form validation library
         $this->load->helper('form'); // Load form helper
         $this->load->library('session'); // Load session library
@@ -13,6 +13,7 @@ class Login extends CI_Controller {
 
 	//load index page
     function index() {
+
 		$this->load->view('view_header');
         $this->load->view('vlogin');
 		$this->load->view('view_footer');

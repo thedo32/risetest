@@ -1,8 +1,5 @@
 
-<?php 	
-	$this->load->view('view_header');?>
-
-         
+        
 </head>
 
 <body class="bg-body">
@@ -156,7 +153,6 @@
 
 	<?php 
 		$this->load->view('post_container');
-		$this->load->view('view_footer');
 	?>
 
 

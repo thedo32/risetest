@@ -4,7 +4,7 @@
 
 <body class="bg-body">
 	<div class=fix-navbar>
-	<div class=shadowbox><h5>Kupi Batigo Menara</h5></div> 
+	<div class=shadowbox><h3>Kupi Batigo Menara</h3></div> 
 		<a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
@@ -16,7 +16,7 @@
 		<?php else:?> 
 				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>	
 		<?php endif; ?>
-		<?php echo $this->db->count_all('padang');?>
+		<?php // echo $this->db->count_all('padang');?>
 		</div>
 		
 
@@ -39,7 +39,10 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login'); ?>" >Login</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
@@ -53,9 +56,6 @@
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
@@ -80,13 +80,7 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>

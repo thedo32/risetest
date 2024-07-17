@@ -5,7 +5,7 @@
    <?php echo validation_errors(); ?>
 
 	 <div class=fix-navbar>
-		<div class=shadowbox><h5>User Registration</h5></div> 
+		<div class=shadowbox><h3>User Registration</h3></div> 
 
 		<a alt="Login Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
       	<div class=logged-in>
@@ -28,6 +28,9 @@
 			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") !== 'Alpha'):?>
 				<li class="nav-item">
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
 					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
 				</li>
 				<li class="nav-item">
@@ -48,9 +51,6 @@
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
@@ -96,4 +96,13 @@
             </tr>
         </table>
     </form>
+
+	    <br>
+
+<script>
+
+	// for expand and collapse below navbar
+	shiftBelowLTable();
+
+</script>
 	

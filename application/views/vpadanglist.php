@@ -20,7 +20,7 @@
 <body class="bg-body">
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
-	<div class=shadowbox><h5>Kupi Batigo Menara</h5></div> 
+	<div class=shadowbox><h3>Kupi Batigo Menara</h3></div> 
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
@@ -53,7 +53,10 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login'); ?>" >Login</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
@@ -94,7 +97,7 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>

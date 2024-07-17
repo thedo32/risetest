@@ -294,7 +294,6 @@ a {
 	color: var(--bs-link-color);
 	text-decoration: none;
 	padding: 0 5px 0 5px;
-	font-size: 0.9em;
 }
 
 	a:hover {
@@ -12595,7 +12594,7 @@ textarea.form-control-lg {
 
 /*additional background with image */
 .fix-menu {
-	padding: 25px 30px 5px 20px;
+	padding: 25px 30px 5px 10px;
 	font-family: "Bungee Spice", sans-serif;
 	text-align: center;
 	position: relative;
@@ -12924,7 +12923,7 @@ img {
 	}
 
 .reg-table {
-	margin: 150px 0 0 50px;
+	margin: 180px 0 0 50px;
 	transition: margin-top 1.5s;
 }
 
@@ -13072,7 +13071,7 @@ img {
 	font-optical-sizing: auto;
 	font-variation-settings: "MORF" 15, "SHLN" 50;
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 100px;

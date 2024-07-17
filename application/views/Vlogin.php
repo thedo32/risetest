@@ -17,9 +17,12 @@
 
 <body class="bg-body">
     <div class=fix-navbar>
-		<div class=shadowbox><h5>Login Page</h5></div> 
+		<div class=shadowbox><h3>Login Page</h3></div> 
 		<a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
-      
+		<div class=logged-in>
+			<a href="<?php echo base_url('register/add'); ?>"class=h7>Register</a>	
+		</div>
+
 		  <div class=fix-menu>
 			<nav class="navbar-expand-lg navbar-light">
 		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -36,6 +39,9 @@
 					</li>
 					<li class="nav-item">
 						<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					</li>
+					<li class="nav-item">
+						<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 					</li>
 					<li class="nav-item">
 						<a href="<?php echo base_url('register/add'); ?>">Register</a>

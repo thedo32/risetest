@@ -4,7 +4,7 @@
 
 <body class="bg-body">
 	<div class=fix-navbar>
-		<div class=shadowbox><h5>Kupi Batigo Taluak Buo</h5></div> 
+		<div class=shadowbox><h3>Kupi Batigo Taluak Buo</h3></div> 
 		<a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
@@ -37,7 +37,10 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login'); ?>" >Login</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
@@ -78,13 +81,7 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				</li>
-				<li class="nav-item">
-					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>

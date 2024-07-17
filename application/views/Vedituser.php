@@ -2,7 +2,7 @@
 </head>  
 <body class="bg-body">
     <div class=fix-navbar>
-		<div class=shadowbox><h5>Edit User</h5></div>
+		<div class=shadowbox><h3>Edit User</h3></div>
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		
 		<div class=logged-in>
@@ -32,7 +32,7 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
@@ -73,7 +73,7 @@
 					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('Painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -117,4 +117,11 @@
             </tr>
         </table>
     </form>
+
+<script>
+
+	// for expand and collapse below navbar
+	shiftBelowRgTable();
+
+</script>
 	

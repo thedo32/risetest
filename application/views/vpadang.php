@@ -102,6 +102,9 @@
 				<td><?php echo htmlspecialchars_decode(set_value('text', $padang->text)); ?></td>
 			</tr>
 			<tr>
+				<td><img src="<?php echo base_url($padang->cover); ?>" height=80% width=80% alt="Cover Image"></td>
+			</tr>
+			<tr>
 				<td>Visitor Location: <?php echo $city; ?>, <?php echo $country; ?></p></td>
 			</tr>
 		</tbody>		

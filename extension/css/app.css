@@ -12962,6 +12962,7 @@ img {
 
 .read-table {
 	margin-top: 150px;
+	margin-bottom: 75px;
 	transition: margin-top 1.5s;
 }
 

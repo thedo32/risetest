@@ -153,8 +153,8 @@
                             </td>
                             <td><?php echo character_limiter($taluak_list['text'],30); ?></td>
                             <td>
-                                <a href="<?php echo site_url('news/edit/' . $taluak_list['id']); ?>">Edit</a><p>
-                                <a href="<?php echo site_url('news/delete/' . $taluak_list['id']); ?>" onclick="return confirm('Are you sure you want to delete this news?');">Delete</a>
+                                <a href="<?php echo site_url('news/edit/taluak/' . $taluak_list['id']); ?>">Edit</a><p>
+                                <a href="<?php echo site_url('news/delete/taluak/' . $taluak_list['id']); ?>" onclick="return confirm('Are you sure you want to delete this news?');">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -202,6 +202,8 @@
 	<br>
     <?php echo $this->pagination->create_links(); 
 	?>
+	<br>
+	<br>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 

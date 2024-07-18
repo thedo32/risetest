@@ -192,6 +192,8 @@
 	<br>
     <?php echo $this->pagination->create_links(); 
 	?>
+	<br>
+	<br>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 

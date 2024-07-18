@@ -73,22 +73,13 @@ $route['news/index'] = 'news/index';
 $route['news/view'] = 'news/view';
 
 $route['padang'] = 'padang/index'; 
-$route['padang/add'] = 'padang/add';
-$route['padang/edit/(:num)'] = 'padang/edit/$1'; 
-$route['padang/delete/(:num)'] = 'padang/delete/$1'; 
 $route['padang/index'] = 'padang/index'; 
 $route['padang/view'] = 'padang/view';
 
 $route['taluak'] = 'taluak/index'; 
-$route['taluak/add'] = 'taluak/add';
-$route['taluak/edit/(:num)'] = 'taluak/edit/$1'; 
-$route['taluak/delete/(:num)'] = 'taluak/delete/$1'; 
 $route['taluak/index'] = 'taluak/index'; 
 $route['taluak/view'] = 'taluak/view';
 
 $route['painan'] = 'painan/index'; 
-$route['painan/add'] = 'painan/add';
-$route['painan/edit/(:num)'] = 'painan/edit/$1'; 
-$route['painan/delete/(:num)'] = 'painan/delete/$1'; 
 $route['painan/index'] = 'painan/index'; 
 $route['painan/view'] = 'painan/view';

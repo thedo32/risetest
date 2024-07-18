@@ -78,7 +78,7 @@
 					<a href="<?php echo base_url('news/add/painan'); ?>">Add Menu Space</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+					<a href="<?php echo base_url('news/add/news'); ?>">Add News</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
@@ -146,8 +146,8 @@
                             </td>
                             <td><?php echo character_limiter($painan_list['text'],30); ?></td>
                             <td>
-                                <a href="<?php echo site_url('news/edit/' . $painan_list['id']); ?>">Edit</a><p>
-                                <a href="<?php echo site_url('news/delete/' . $painan_list['id']); ?>" onclick="return confirm('Are you sure you want to delete this news?');">Delete</a>
+                                <a href="<?php echo site_url('news/edit/painan/' . $painan_list['id']); ?>">Edit</a><p>
+                                <a href="<?php echo site_url('news/delete/painan/' . $painan_list['id']); ?>" onclick="return confirm('Are you sure you want to delete this news?');">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -192,6 +192,8 @@
 	<br>
     <?php echo $this->pagination->create_links(); 
 	?>
+	<br>
+	<br>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 

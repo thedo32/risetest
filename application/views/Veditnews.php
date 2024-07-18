@@ -54,7 +54,7 @@ tinymce.init({
 					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+					<a href="<?php echo base_url('news/add/news'); ?>">Add News</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>

@@ -7,7 +7,7 @@
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=logged-in>
 			<?php if ($this->session->userdata("name") === 'Alpha' ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a><br>
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 			<?php else:?> 
 				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>
@@ -27,26 +27,26 @@
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
+					<a href="<?php echo base_url('padang'); ?>" >Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 			<?php elseif ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>">Menara</a>
+					<a href="<?php echo base_url('padang'); ?>">Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -68,13 +68,13 @@
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>">Menara</a>
+					<a href="<?php echo base_url('padang'); ?>">Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('home'); ?>">Dashboard</a>
@@ -86,6 +86,7 @@
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
 				</li>
 			<?php endif; ?>
+			</ul>
 			</div>
 			</nav>
 		</div>

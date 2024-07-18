@@ -21,46 +21,71 @@ tinymce.init({
 <body class="bg-body">
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
-        <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
-		<div class=logged-in>
-		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a>
-		<?php elseif ($this->session->userdata("name") != Null ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7><?php echo $this->session->userdata("name"); ?></a>
-		<?php endif; ?>	
-		</div>
+		<div class=shadowbox><h3>Add News</h3></div>
+        <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+		
 		<div class=fix-menu>
-			<?php if ($this->session->userdata("name") === Null):
-				redirect(base_url(''));	
-			elseif ($this->session->userdata("name") === 'Alpha'):?>
-				<a href="<?php echo base_url(''); ?>">Home</a>
-				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				<a href="<?php echo base_url('register/add'); ?>">Add User</a>
-				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+		<nav class="navbar-expand-lg navbar-light">
+		  	<button class=" table navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+     
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="text-center navbar-nav mr-auto">
+
+
+			<?php if ($this->session->userdata("name") === 'Alpha'):?>
+				<li class="nav-item">
+					<a href="<?php echo base_url('home'); ?>">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('padang'); ?>">Kafe</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				</li>
 			<?php else: ?>
-				<h6>You're Logged in' !,<a href="<?php echo base_url('home'); ?>"><?php echo $this->session->userdata("name") ?> </h6>
-				<a href="<?php echo base_url(''); ?>">Home</a>
-				<a href="<?php echo base_url('home'); ?>">Dashboard</a>
-				<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
+				redirect(base_url(''));	
 			<?php endif; ?>
+			</ul>
+			</div>
+			</nav>
 		</div>
 	</div>
 
-	<div class=shadowboxmin><h1>Add News</h1></div>
-
-    <form action="<?php echo base_url('news/add'); ?>" method="post">
-        <table class=login-table>
-            <tr>
-                <td>Title</td>
-                <td><input type="text" size="50"  name="title" value="<?php echo set_value('title'); ?>"></td>
-            </tr>
-            <tr>
-                <td>Text</td>
-                <td><textarea name="text" value="<?php echo set_value('text'); ?>"></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Add News"></td>
-            </tr>
-        </table>
-    </form>
+ 
+<form action="<?php echo base_url(uri_string()); ?>" method="post" enctype="multipart/form-data">
+    <table class="login-table">
+        <tr>
+            <td>Title</td>
+            <td><input type="text" size="50" name="title" value="<?php echo set_value('title'); ?>"></td>
+        </tr>
+        <tr>
+            <td>Text</td>
+            <td><textarea name="text"><?php echo set_value('text'); ?></textarea></td>
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td><input type="file" name="cover"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add News"></td>
+        </tr>
+    </table>
+</form>

@@ -19,12 +19,13 @@
 </head>
 <body class=bg-body>
     <div class=fix-navbar>
+		<div class=shadowbox><h3>User List</h3></div>
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
 		<div class=logged-in>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a><br>
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		</div>
-		<div class=shadowboxmin><h4>User List</h4></div>
+	
 		
 		<div class=fix-menu>
 			<?php echo validation_errors(); ?>
@@ -39,13 +40,13 @@
 			<ul class="text-center navbar-nav mr-auto">
 			<?php if ($this->session->userdata("name") === 'Alpha'):?>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
+					<a href="<?php echo base_url('padang'); ?>" >Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
@@ -59,10 +60,11 @@
 			<?php else: 
 				redirect(base_url(''));	
 			endif; ?>
+			</ul>
 			</div>
 			</nav>
 		</div>
-	</div> 
+	</div>
 
 
 		<!-- notification if add or edit user success-->

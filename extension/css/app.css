@@ -12942,10 +12942,12 @@ img {
 	margin-left: 85%;
 	position: fixed;
 	font-size: 0.8rem;
+	z-index:201;
 }
 
 .login-table {
 	margin-top: 150px;
+	margin-bottom: 75px;
 	transition: margin-top 1.5s;
 }
 

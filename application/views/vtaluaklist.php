@@ -23,14 +23,14 @@
 <body class="bg-body">
 	<?php echo validation_errors(); ?>
     <div class=fix-navbar>
-		<div class=shadowbox><h3>Kupi Batigo Taluak Buo</h3></div> 
+		<div class=shadowbox><h3>Wisata Kupi Batigo</h3></div> 
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a><br>
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		<?php elseif ($this->session->userdata("name") != Null ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8><?php echo $this->session->userdata("name"); ?></a>
+				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8><?php echo $this->session->userdata("name"); ?></a><br>
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		<?php else:?> 
 				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>	
@@ -51,13 +51,13 @@
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
+					<a href="<?php echo base_url('padang'); ?>" >Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login'); ?>" >Login</a>
@@ -67,13 +67,13 @@
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>" >Menara</a>
+					<a href="<?php echo base_url('padang'); ?>" >Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('register'); ?>">User Dashboard</a>
@@ -82,7 +82,7 @@
 					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('news/add'); ?>">Add News</a>
+					<a href="<?php echo base_url('news/add/taluak'); ?>">Add Menu Wisata</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
@@ -92,18 +92,19 @@
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>">Menara</a>
+					<a href="<?php echo base_url('padang'); ?>">Kafe</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+					<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
 				</li>
 			<?php endif; ?>
+			</ul>
 			</div>
 			</nav>
 		</div>
@@ -200,33 +201,7 @@
 
 	<br>
     <?php echo $this->pagination->create_links(); 
-			   $this->load->view('image_slider');
 	?>
-	<br>
-	<div class=slideshow-container-art>  
-	  <div class=articlebox>		
-		<center><h6>Tentang Desa Wisata Teluk Buo:</h6></center>
-		Terletak di Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang, Provinsi Sumatera Barat, Indonesia.<br>
-		<strong>Desa Wisata Teluk Buo berhasil menembus 100 besar Anugerah Desa Wisata Indonesia (ADWI) tahun 2024.</strong><br>
-		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi wisatawan.<br>
-		Kawasan wisata bahari yang menawan ini tersembunyi di balik batu karang Teluk Buo.<br>
-		Keberagaman hutan mangrove menjadikannya sebagai Ekowisata Mangrove yang menyegarkan.<br>
-		<strong>Jenis mangrove di lokasi ini adalah:</strong><br>
-		Rhizophora apiculate, Sonneratia alba, Avicennia corniculatum, Bruguiera gymnorhiza, dan Xylocarpus granatum <br>
-		Desa Wisata Teluk Buo juga memiliki aktivitas nelayan yang menarik untuk disaksikan.<br>
-		<strong>Atraksi utama:</strong><br>
-		Teluk yang indah dan pantai berpasir putih, Ekowisata Mangrove, Aktivitas nelayan, Berenang, snorkeling, dan memancing, serta Kuliner khas daerah<br>
-		<strong>Cara menuju ke sana:</strong><br>
-		Desa Wisata Teluk Buo terletak sekitar 30 kilometer dari Pusat Kota Padang, bisa menggunakan transportasi umum atau menyewa mobil untuk sampai ke sana.<br>
-		<strong>Penginapan:</strong><br>
-		Terdapat beberapa homestay dan guest house yang tersedia di Desa Wisata Teluk Buo, termasuk Homestay dan Camping Ground Kupibatigo Taluak Buo<br>
-		<strong>Tips:</strong><br>
-		Bawa tabir surya, lotion anti nyamuk, topi, jangan lupa hormati budaya dan lingkungan setempat.
-	  </div>
-    </div>
-
-<?php $this->load->view('post_container');?>
-
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 

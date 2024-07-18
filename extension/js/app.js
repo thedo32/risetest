@@ -113,7 +113,7 @@ function shiftBelowSlide() {
 				slideShow.style.marginTop = '110px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				slideShow.style.marginTop = 160 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
+				slideShow.style.marginTop = 180 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
 				fixMenu.style.fontSize = '1.8em';
 			}
 		});
@@ -134,7 +134,7 @@ function shiftBelowRTable() {
 				readTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				readTable.style.marginTop = 185 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
+				readTable.style.marginTop = 200 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
 				fixMenu.style.fontSize = '1.8em';
 			}
 		});
@@ -153,7 +153,7 @@ function shiftBelowRgTable() {
 				regTable.style.marginTop = '180px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				regTable.style.marginTop = 200 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
+				regTable.style.marginTop = 210 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
 				fixMenu.style.fontSize = '1.8em';
 			}
 		});
@@ -173,7 +173,7 @@ function shiftBelowLTable() {
 				loginTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				loginTable.style.marginTop = 185 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
+				loginTable.style.marginTop = 200 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
 				fixMenu.style.fontSize = '1.8em';
 			}
 		});
@@ -192,7 +192,7 @@ function shiftBelowHTable() {
 				homeTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = 1 + 'em';
 			} else {
-				homeTable.style.marginTop = 185 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
+				homeTable.style.marginTop = 200 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
 				fixMenu.style.fontSize = 1.8 + 'em';
 			}
 		});
@@ -211,7 +211,7 @@ function shiftBelowUTable() {
 				userTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = 1 + 'em';
 			} else {
-				userTable.style.marginTop = 185 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
+				userTable.style.marginTop = 200 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
 				fixMenu.style.fontSize = 1.8 + 'em';
 			}
 		});

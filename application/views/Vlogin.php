@@ -35,18 +35,19 @@
 						<a href="<?php echo base_url('home'); ?>">Home</a>
 					</li>
 					<li class="nav-item">
-						<a href="<?php echo base_url('padang'); ?>">Menara</a>
+						<a href="<?php echo base_url('padang'); ?>">Kafe</a>
 					</li>
 					<li class="nav-item">
-						<a href="<?php echo base_url('taluak'); ?>" >Taluak Buo</a>
+						<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
 					</li>
 					<li class="nav-item">
-						<a href="<?php echo base_url('painan'); ?>" >Painan</a>
+						<a href="<?php echo base_url('painan'); ?>" >Creative Space</a>
 					</li>
 					<li class="nav-item">
 						<a href="<?php echo base_url('register/add'); ?>">Register</a>
 					</li>
-				</div>
+				</ul>
+			</div>
 			</nav>
 		</div>
 	</div>

@@ -4,7 +4,7 @@ class Login extends CI_Controller {
     
     function __construct() {
         parent::__construct();
-        $this->load->model('Mlogin'); // Ensure the mlogin model is loaded
+        $this->load->model('Mlogin'); // Ensure the Mlogin model is loaded
         $this->load->library('form_validation'); // Load form validation library
         $this->load->helper('form'); // Load form helper
         $this->load->library('session'); // Load session library
@@ -25,7 +25,7 @@ class Login extends CI_Controller {
         $password = $this->input->post('password');
 
         // Fetch user from database
-        $user = $this->mlogin->get_user_by_username($username); // Use $this->mlogin
+        $user = $this->Mlogin->get_user_by_username($username); // Use $this->Mlogin
 
         // Verify password
         if ($user && password_verify($password, $user->password)) {

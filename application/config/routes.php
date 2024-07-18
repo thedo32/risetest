@@ -66,9 +66,9 @@ $route['register/delete/(:num)'] = 'register/delete/$1';
 $route['register/index'] = 'register/index'; 
 
 $route['news'] = 'news/index'; 
-$route['news/add'] = 'news/add';
-$route['news/edit/(:num)'] = 'news/edit/$1'; 
-$route['news/delete/(:num)'] = 'news/delete/$1'; 
+$route['news/add/([a-z])'] = 'news/add/$1';
+$route['news/edit/([a-z])/(:num)'] = 'news/edit/$1/$2'; 
+$route['news/delete/([a-z])/(:num)'] = 'news/delete/$1/$2'; 
 $route['news/index'] = 'news/index'; 
 $route['news/view'] = 'news/view';
 

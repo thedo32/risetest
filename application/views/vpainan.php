@@ -90,6 +90,25 @@
 			</nav>
 		</div>
 	</div>
+
+	<?php if ($this->session->userdata("name") === Null):
+		$name = "Tamu";
+	else:
+		$name = $this->session->userdata("name");
+	endif; 
+	
+	$pesanan = $painan->title;
+
+	$whatsappLink = "https://wa.me/628994659530?text=" . urlencode("Halo Kupi Batigo, saya $name, tertarik untuk memesan $pesanan");
+
+	?>
+
+	<div class=h11>
+		<p>Kontak Whatsapp Pemesanan:</p>
+		<a href="<?php echo $whatsappLink; ?>" target=_blank>
+			<img src="/storage/app/public/images/logo/walogo.png" height=50% width=50% alt="Cover Image">
+		</a><br>
+	</div>
 	  
 	<table class=read-table>
 		<tbody>

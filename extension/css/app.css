@@ -12791,6 +12791,30 @@ img {
 		font-size:small;
 	}
 
+.slideshow-container-blog {
+	max-width: 800px;
+	position: relative;
+	padding-bottom: 60px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: x-small;
+	text-align: center;
+	z-index: 99;
+}
+
+	.slideshow-container-blog:hover {
+		transition: ease 2s;
+		transform: scale(1.3);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+		font-size: small;
+	}
+
+
 /* Next & previous buttons */
 .prev, .next {
 	cursor: pointer;
@@ -13051,15 +13075,11 @@ img {
 }
 
 .sidepostboxsmall {
-	border: inset;
-	display: block;
-	box-shadow: 4px 4px lightgrey;
-	border-radius: 5px;
-	padding: 5px 5px 5px 5px;
-	font-size: 0.8em;
 	width: 100%;
-	background-color: #ffffff7a;
-	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-bottom: 50px;
 }
 
 .news-imgthumb {

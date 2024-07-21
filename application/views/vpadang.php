@@ -114,17 +114,17 @@
 	<table class=read-table>
 		<tbody>
 			<tr>
-				<td><h5><?php echo set_value('title', $padang->title); ?></h5></div></td>
+				<td><h4><?php echo set_value('title', $padang->title); ?></h4></div></td>
 			</tr>
 			<tr>
-				<td><?php echo htmlspecialchars_decode(set_value('text', $padang->text)); ?></td>
+				<td><h5><?php echo htmlspecialchars_decode(set_value('text', $padang->text)); ?></h5></td>
 			</tr>
 			<tr>
 				<td><div class=slideshow-container-blog><img src="<?php echo base_url($padang->cover); ?>" height=80% width=80% alt="Cover Image"></div></td>
 			</tr>
-			<tr>
-				<td>Visitor Location: <?php echo $city; ?>, <?php echo $country; ?></p></td>
-			</tr>
+			<!-- <tr>
+				<td>Visitor Location: <?php //echo $city; ?>, <?php //echo $country; ?></p></td>
+			</tr> -->
 		</tbody>		
 	</table>
 

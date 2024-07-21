@@ -147,7 +147,7 @@ class Padang extends CI_Controller {
 		}
 
 		$art_id=0;
-		$title="Padang";
+		$title="Kafe";
 	    $this->Mpadang->increment_hit_count($title, $user_id, $art_id, $ip_address);
 
 

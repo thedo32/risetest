@@ -1,25 +1,20 @@
+<!-- Place the first <script> tag in your HTML's <head> -->
 <script type="text/javascript" src="https://cdn.tiny.cloud/1/bmlmb5p14dr85225jial6a2am0m0m3vihfyzrbkwbe9n2mnf/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
-// tinymce loader
-tinymce.init({
-	selector: 'textarea',
-	plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-	toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-	height: 350,
-	tinycomments_mode: 'embedded',
-	tinycomments_author: 'Author name',
-	mergetags_list: [
-		{ value: 'First.Name', title: 'First Name' },
-		{ value: 'Email', title: 'Email' },
-	],
-	ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-});
-</script>
+
 
 </head>  
 <body class="bg-body">
+
+<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+  });
+</script>
 	
-	<?php echo validation_errors(); ?>
+
     <div class=fix-navbar>
 		<div class=shadowbox><h3>Edit News</h3></div>
         <a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
@@ -93,5 +88,5 @@ tinymce.init({
         </table>
     </form>
 	
-</body>
-</html>
+	<?php echo validation_errors(); ?>
+	<br><br>

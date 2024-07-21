@@ -23,9 +23,9 @@
         <a alt="News Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a>
+				  <a href="<?php echo base_url('home'); ?>" class=h7>Admin</a>
 		<?php elseif ($this->session->userdata("name") != Null ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h7><?php echo $this->session->userdata("name"); ?></a>
+				  <a href="<?php echo base_url('home'); ?>" class=h7><?php echo $this->session->userdata("name"); ?></a>
 		<?php endif; ?>	
 		</div>
 		

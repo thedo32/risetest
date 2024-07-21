@@ -53,18 +53,7 @@
 	</div>
 	
 
-    <!-- notification if login error -->
-    <?php if ($this->session->tempdata('error_login')): ?>
-		<p id="addeditSuccessMessage" style="color: red;"><?php echo $this->session->tempdata('error_login'); ?></p>
-    <?php endif; 
-
-		if ($this->session->tempdata('email_sent')): ?>
-    <p style="color: green;"><?php echo $this->session->tempdata('email_sent'); ?></p>
-    <?php elseif ($this->session->tempdata('email_failed')): ?>
-    <p style="color: green;"><?php echo $this->session->tempdata('email_failed'); ?></p>
-    <?php endif; ?>
-
-
+   
     <form action="<?php echo base_url('login/actionlogin'); ?>" method="post">
 
         <table class=login-table>
@@ -98,7 +87,17 @@
         </table>
 
     </form>
-    <br>
+	 <!-- notification if login error -->
+    <?php if ($this->session->tempdata('error_login')): ?>
+		<p id="addeditSuccessMessage" style="color: red;"><?php echo $this->session->tempdata('error_login'); ?></p>
+    <?php endif; 
+
+	if ($this->session->tempdata('email_sent')): ?>
+		<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('email_sent'); ?></p>
+    <?php elseif ($this->session->tempdata('email_failed')): ?>
+		<p id="addeditSuccessMessage" style="color: green;"><?php echo $this->session->tempdata('email_failed'); ?></p>
+    <?php endif; ?>
+	<br><br>
 
 <script>
 

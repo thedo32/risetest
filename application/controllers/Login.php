@@ -32,14 +32,15 @@ class Login extends CI_Controller {
             // Set session data
             $data_session = array(
 				'id' => $user->id,
-                'name' => $username,
+				'name' => $user->name,
+                'username' => $username,
                 'status' => "login"
             );
 
             $this->session->set_userdata($data_session);
 
             //to home page
-			redirect(base_url('home'));
+			redirect(base_url(''));
 		
         } else {
             // Invalid credentials

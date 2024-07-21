@@ -147,7 +147,7 @@ class Painan extends CI_Controller {
 		}
 
 		$art_id=0;
-		$title="Painan";
+		$title="Creative Space";
 	    $this->Mpainan->increment_hit_count($title, $user_id, $art_id, $ip_address);
 
     // Pagination configuration

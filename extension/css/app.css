@@ -205,7 +205,7 @@ h6, .h6 {
 	border-radius: 10px 0 0 10px;
 	background-color: white;
 	font-size: 1em;
-	float:right;
+	float: right;
 	text-align: center;
 }
 
@@ -12788,7 +12788,7 @@ img {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: -300px;
-		font-size:small;
+		font-size: small;
 	}
 
 .slideshow-container-blog {
@@ -12934,7 +12934,7 @@ img {
 	padding: 0 0 0 40px;
 	margin-top: 50px;
 	transition: margin-top 1.5s;
-	width:95%;
+	width: 95%;
 }
 
 .user-table {
@@ -12973,7 +12973,7 @@ img {
 	margin-left: 85%;
 	position: fixed;
 	font-size: 0.8rem;
-	z-index:201;
+	z-index: 201;
 }
 
 .login-table {
@@ -13357,7 +13357,7 @@ img {
 	width: 50px;
 	text-align: center;
 	text-decoration: none;
-	margin:10px;
+	margin: 10px;
 }
 
 	.fa:hover {

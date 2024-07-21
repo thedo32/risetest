@@ -10,7 +10,7 @@
 		<a alt="Login Page" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
       	<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
-				You're Logged in' <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a><br>
+				  <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a><br>
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		<?php else:?> 
 				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>
@@ -81,7 +81,15 @@
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="30" /></td>
+                <td><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="50" /></td>
+            </tr>
+			 <tr>
+                <td>Handphone</td>
+                <td><input type="text" name="mobile" value="<?php echo set_value('mobile'); ?>" size="25" /></td>
+            </tr>
+			 <tr>
+                <td>Alamat</td>
+                <td><input type="text" name="address" value="<?php echo set_value('address'); ?>" size="100" /></td>
             </tr>
             <tr>
                 <td>Password</td>
@@ -94,8 +102,7 @@
             <tr>
                 <td></td>
                 <td><input type="submit" value="Add User"></td>
-			
-            </tr>
+		    </tr>
         </table>
     </form>
 

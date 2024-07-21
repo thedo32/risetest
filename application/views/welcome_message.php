@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 
 	#container {
-		margin: 40px;
+		margin: 40px 120px 40px 60px;
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
@@ -52,11 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 	
 	<div id="body">
-		<p>This Your Dashboard, the page is being generated dynamically by Kupi Batigo page</p>
+		<p>Ini Dashboard Anda, halaman dibuat secara dinamis oleh halaman web Kupi Batigo</p>
 		
-		<p>If you would like to <strong>see the Menu</strong> you'll find it located at top section
+		<p>Jika Anda <strong>ingin melihat Menu</strong>, Anda akan menemukannya terletak di bagian atas</p>
 
 		
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds </strong></p>
+	<p class="footer">Halaman dirender dalam <strong>{elapsed_time}</strong> detik</p>
 </div>
 

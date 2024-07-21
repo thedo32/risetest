@@ -12,7 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"geoip2/geoip2": "*"
+		"geoip2/geoip2": "*",
+		"twilio/sdk": "*"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

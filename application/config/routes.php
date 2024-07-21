@@ -53,11 +53,13 @@ $route['default_controller'] = 'home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
+$route['home'] = 'home/index';
+
 $route['login'] = 'login/index';
 $route['login/actionlogin'] = 'login/actionlogin';
 $route['login/logout'] = 'login/logout';
 $route['login/(:any)'] = 'view/$1';
-$route['home'] = 'home/index';
+$route['login/index'] = 'login/index';
 
 $route['register'] = 'register/index'; 
 $route['register/add'] = 'register/add';

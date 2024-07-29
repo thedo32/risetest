@@ -37,6 +37,38 @@ function showSlides() {
 }
 
 
+//function for pop_up_slider
+function showSlidesPop() {
+	for (var i = 0; i < slidesPop.length; i++) {
+		slidesPop[i].style.display = "none";
+	}
+	slidePopIndex++;
+	if (slidePopIndex > slidesPop.length) { slidePopIndex = 1 }
+	fadeInOut(slidesPop[slidePopIndex - 1]);
+	setTimeout(showSlidesPop, 6000); // Change image every 6 seconds
+}
+
+function currentSlidePop(n) {
+	slidePopIndex = n;
+	showSlidePop(slidePopIndex);
+}
+
+function showSlidePop(n) {
+	if (n > slidesPop.length) { slidePopIndex = 1 }
+	if (n < 1) { slidePopIndex = slidesPop.length }
+	for (var i = 0; i < slidesPop.length; i++) {
+		slidesPop[i].style.display = "none";
+	}
+	fadeInOut(slidesPop[slidePopIndex - 1]);
+}
+
+function plusSlidesPop(n) {
+	showSlidePop(slidePopIndex += n);
+}
+
+
+
+
 //function for image_slider
 function showSlidesImg() {
 	for (var i = 0; i < slides.length; i++) {
@@ -69,7 +101,7 @@ function plusSlides(n) {
 function fadeInOut(element) {
 	var opacity = 0;
 	var interval = 10; // Interval for smoother transition
-	var duration = 1000; // 2 seconds fade in/out
+	var duration = 1000; // 1 seconds fade in/out
 
 	element.style.opacity = opacity;
 	element.style.display = "block";
@@ -85,20 +117,6 @@ function fadeInOut(element) {
 	}, interval);
 }
 
-function fadeOut(element) {
-	var opacity = 1;
-	var interval = 10; // Interval for smoother transition
-	var duration = 2000; // 2 seconds fade in/out
-
-	var fadeOutTimer = setInterval(function () {
-		if (opacity <= 0) {
-			clearInterval(fadeOutTimer);
-			element.style.display = "none";
-		}
-		element.style.opacity = opacity;
-		opacity -= interval / duration;
-	}, interval);
-}
 
 // for expand and collapse below navbar slide
 function shiftBelowSlide() {
@@ -113,8 +131,8 @@ function shiftBelowSlide() {
 				slideShow.style.marginTop = '110px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				slideShow.style.marginTop = 180 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
-				fixMenu.style.fontSize = '1.8em';
+				slideShow.style.marginTop = 200 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
+				fixMenu.style.fontSize = '1.9em';
 			}
 		});
 	});
@@ -134,8 +152,8 @@ function shiftBelowRTable() {
 				readTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				readTable.style.marginTop = 200 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
-				fixMenu.style.fontSize = '1.8em';
+				readTable.style.marginTop = 210 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
+				fixMenu.style.fontSize = '1.9em';
 			}
 		});
 	});
@@ -154,7 +172,7 @@ function shiftBelowRgTable() {
 				fixMenu.style.fontSize = '1em';
 			} else {
 				regTable.style.marginTop = 210 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
-				fixMenu.style.fontSize = '1.8em';
+				fixMenu.style.fontSize = '1.9em';
 			}
 		});
 	});
@@ -173,8 +191,8 @@ function shiftBelowLTable() {
 				loginTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = '1em';
 			} else {
-				loginTable.style.marginTop = 200 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
-				fixMenu.style.fontSize = '1.8em';
+				loginTable.style.marginTop = 210 + Navbar.offsetHeight + 'px' // Adjust this value based on the height of the navbar when expanded
+				fixMenu.style.fontSize = '1.9em';
 			}
 		});
 	});
@@ -192,8 +210,8 @@ function shiftBelowHTable() {
 				homeTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = 1 + 'em';
 			} else {
-				homeTable.style.marginTop = 200 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
-				fixMenu.style.fontSize = 1.8 + 'em';
+				homeTable.style.marginTop = 210 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
+				fixMenu.style.fontSize = '1.9em';
 			}
 		});
 	});
@@ -211,9 +229,26 @@ function shiftBelowUTable() {
 				userTable.style.marginTop = '150px';
 				fixMenu.style.fontSize = 1 + 'em';
 			} else {
-				userTable.style.marginTop = 200 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
-				fixMenu.style.fontSize = 1.8 + 'em';
+				userTable.style.marginTop = 210 + Navbar.offsetHeight + 'px'; // Adjust this value based on the height of the navbar when expanded
+				fixMenu.style.fontSize = '1.9em';
 			}
 		});
 	});
 }
+
+
+// for pop up image
+document.addEventListener('DOMContentLoaded', function () {
+	var popup = document.getElementById('popup');
+	var closeButton = document.getElementById('close-button');
+
+	closeButton.onclick = function () {
+		popup.style.display = 'none';
+	}
+
+	window.onclick = function (event) {
+		if (event.target == popup) {
+			popup.style.display = 'none';
+		}
+	}
+});

@@ -52,9 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 	
 	<div id="body">
-		<p>Selamat Datang, halaman dibuat secara dinamis oleh halaman web Kupi Batigo</p>
+		<p>Ini Dashboard Anda, halaman dibuat secara dinamis oleh halaman web Kupi Batigo</p>
 		
-		<p>Jika Anda <strong>ingin melihat Menu</strong>, Anda akan menemukannya terletak di bagian atas (<strong>tombol &equiv; </strong>) </p>
+		<p>Jika Anda <strong>ingin melihat Menu</strong>, Anda akan menemukannya terletak di bagian atas</p>
 
 		
 	<p class="footer">Halaman dirender dalam <strong>{elapsed_time}</strong> detik</p>

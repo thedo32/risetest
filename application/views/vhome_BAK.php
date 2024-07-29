@@ -1,10 +1,10 @@
-   
-	
+
+        
 </head>
 
 <body class="bg-body">
 	<div class=fix-navbar>
-	<div class=shadowbox><h3>Kafe Kupi Batigo</h3></div>  
+		<div class=shadowbox><h3>Selamat Datang Di Kupi Batigo</h3></div>
 		<a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
@@ -15,8 +15,7 @@
 				<a href="<?php echo base_url('login/logout'); ?>"class=h8>Logout</a>
 		<?php else:?> 
 				<a href="<?php echo base_url('login'); ?>"class=h7>Login</a>	
-		<?php endif; ?>
-		<?php // echo $this->db->count_all('padang');?>
+		<?php endif; ?>	
 		</div>
 		
 
@@ -49,7 +48,7 @@
 					<a href="<?php echo base_url('home'); ?>">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('padang'); ?>" >Kafe</a>
+					<a href="<?php echo base_url('padang'); ?>">Kafe</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('taluak'); ?>" >Wisata</a>
@@ -64,7 +63,7 @@
 					<a href="<?php echo base_url('register/add'); ?>">Add User</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo base_url('news/add/padang'); ?>">Add Menu Kafe</a>
+					<a href="<?php echo base_url('news/add/news'); ?>">Add News</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
@@ -91,45 +90,69 @@
 			</nav>
 		</div>
 	</div>
-
-	<?php if ($this->session->userdata("name") === Null):
-		$name = "Tamu";
-	else:
-		$name = $this->session->userdata("name");
-	endif; 
 	
-	$pesanan = $padang->title;
-
-	$whatsappLink = "https://wa.me/628994659530?text=" . urlencode("Halo Kupi Batigo, saya $name, tertarik untuk memesan $pesanan");
-
+	<?php $this->load->view("header_slider");
+		  // $this->load->view('side_post');
 	?>
 
-	<div class=h11>
-		<p></p>
-		<h6>Kontak Whatsapp Pemesanan:</h6>
-		<a href="<?php echo $whatsappLink; ?>" target=_blank>
-			<img src="/storage/app/public/images/logo/walogo.png" height=50% width=50% alt="Cover Image">
-		</a><br>
+	<div class=h10> 
+		<a href="https://en.kopibatigo.id">ENG</a><br>
+		<a href="#" class="fa fa-instagram"></a><br>
+		<a href="#" class="fa fa-facebook"></a><br>
 	</div>
-	  
-	<table class=read-table>
-		<tbody>
-			<tr>
-				<td><h4><?php echo set_value('title', $padang->title); ?></h4></div></td>
-			</tr>
-			<tr>
-				<td><h5><?php echo htmlspecialchars_decode(set_value('text', $padang->text)); ?></h5></td>
-			</tr>
-			<tr>
-				<td><div class=slideshow-container-post><img src="<?php echo base_url($padang->cover); ?>" height=150% width=150% alt="Cover Image"></div></td>
-			</tr>
-			<!-- <tr>
-				<td>Visitor Location: <?php //echo $city; ?>, <?php //echo $country; ?></p></td>
-			</tr> -->
-		</tbody>		
-	</table>
 
+	
+	
+		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
+		<div class = home-table>
+			<h6>Halo <a href="<?php echo base_url('home'); ?>">Admin</a></h6>
+			<?php $this->load->view('welcome_message');?>
+		</div>
+		<?php elseif ($this->session->userdata("name") != Null ):?>
+		<div class = home-table>
+			<h6>Halo <a href="<?php echo base_url('home'); ?>"><?php echo $this->session->userdata("name"); ?></a></h6>
+			<?php $this->load->view('welcome_message');?>
+		</div>
+		<?php else:?>
+			<h6>&nbsp;&nbsp;Silahkan <a href="<?php echo base_url('login'); ?>">Login</a></h6>
+			<?php $this->load->view('welcome_guest');?>
+		<?php endif; ?>
+	</div>
+	
+	<?php 
+		$this->load->view('image_slider');
+	?>
+	
+	<br>
+	<div class=slideshow-container-art>  
+	  <div class=articlebox>		
+		<center><h6>Tentang Desa Wisata Teluk Buo:</h6></center>
+		Terletak di Kelurahan Teluk Kabung Tengah, Kecamatan Bungus Teluk Kabung, Kota Padang, Provinsi Sumatera Barat, Indonesia.<br>
+		<strong>Desa Wisata Teluk Buo berhasil menembus 100 besar Anugerah Desa Wisata Indonesia (ADWI) tahun 2024.</strong><br>
+		Perpaduan pasir putih dan hijau hutan mangrove begitu sempurna, menjadi daya tarik untuk dikunjungi wisatawan.<br>
+		Kawasan wisata bahari yang menawan ini tersembunyi di balik batu karang Teluk Buo.<br>
+		Keberagaman hutan mangrove menjadikannya sebagai Ekowisata Mangrove yang menyegarkan.<br>
+		<strong>Jenis mangrove di lokasi ini adalah:</strong><br>
+		Rhizophora apiculate, Sonneratia alba, Avicennia corniculatum, Bruguiera gymnorhiza, dan Xylocarpus granatum <br>
+		Desa Wisata Teluk Buo juga memiliki aktivitas nelayan yang menarik untuk disaksikan.<br>
+		<strong>Atraksi utama:</strong><br>
+		Teluk yang indah dan pantai berpasir putih, Ekowisata Mangrove, Aktivitas nelayan, Berenang, snorkeling, dan memancing, serta Kuliner khas daerah<br>
+		<strong>Cara menuju ke sana:</strong><br>
+		Desa Wisata Teluk Buo terletak sekitar 30 kilometer dari Pusat Kota Padang, bisa menggunakan transportasi umum atau menyewa mobil untuk sampai ke sana.<br>
+		<strong>Penginapan:</strong><br>
+		Terdapat beberapa homestay dan guest house yang tersedia di Desa Wisata Teluk Buo, termasuk Homestay dan Camping Ground Kupibatigo Taluak Buo<br>
+		<strong>Tips:</strong><br>
+		Bawa tabir surya, lotion anti nyamuk, topi, jangan lupa hormati budaya dan lingkungan setempat.
+	  </div>
+    </div>
+
+	<?php 
+		$this->load->view('post_container');
+	?>
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
+	<br><br>
+
+	
 
     <script>
 		// for go to top button
@@ -151,6 +174,5 @@
         });
 
 		// for expand and collapse below navbar
-		shiftBelowRTable();
-
+		shiftBelowSlide();
 	</script>

@@ -105,7 +105,7 @@
 			</nav>
 		</div>
 	</div>
-
+	
 	<?php $this->load->view("header_slider");
 		  // $this->load->view('side_post');
 	?>

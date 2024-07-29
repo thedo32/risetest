@@ -5,7 +5,7 @@
 <body class="bg-body">
 	<div class=fix-navbar>
 		<div class=shadowbox><h3>Wisata Kupi Batigo</h3></div> 
-		<a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "128" height = "55"></a>
+		<a alt="Menara" href="<?php echo base_url('');?>"><img src="/storage/app/public/images/logo/logo.png" width = "110" height = "60"></a>
 		<div class=logged-in>
 		<?php if ($this->session->userdata("name") === 'Alpha' ):?>
 				  <a href="<?php echo base_url('home'); ?>" class=h8>Admin</a><br>
@@ -106,7 +106,8 @@
 	?>
 
 	<div class=h11>
-		<p>Kontak Whatsapp Pemesanan:</p>
+		<p></p>
+		<h6>Kontak Whatsapp Pemesanan:</h6>
 		<a href="<?php echo $whatsappLink; ?>" target=_blank>
 			<img src="/storage/app/public/images/logo/walogo.png" height=50% width=50% alt="Cover Image">
 		</a><br>
@@ -121,13 +122,13 @@
 				<td><h5><?php echo htmlspecialchars_decode(set_value('text', $taluak->text)); ?></h5></td>
 			</tr>
 			<tr>
-				<td><div class=slideshow-container-blog><img src="<?php echo base_url($taluak->cover); ?>" height=80% width=80% alt="Cover Image"></div></td>
+				<td><div class=slideshow-container-post><img src="<?php echo base_url($taluak->cover); ?>" height=150% width=150% alt="Cover Image"></div></td>
 			</tr>
 			<!-- <tr>
 				<td>Visitor Location: <?php //echo $city; ?>, <?php //echo $country; ?></p></td>
 			</tr> -->
 		</tbody>	
-	</table>
+	</table>m,,,`1 `
 	
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 

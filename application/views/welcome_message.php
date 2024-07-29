@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<p>Ini Dashboard Anda, halaman dibuat secara dinamis oleh halaman web Kupi Batigo</p>
 		
-		<p>Jika Anda <strong>ingin melihat Menu</strong>, Anda akan menemukannya terletak di bagian atas (<strong>tombol &equiv; </strong>)</p>
+		<p>Jika Anda <strong>ingin melihat Menu</strong>, Anda akan menemukannya terletak di bagian atas (<strong>tombol &equiv; </strong>, jika anda menggunakan handphone.) </p>
 
 		
 	<p class="footer">Halaman dirender dalam <strong>{elapsed_time}</strong> detik</p>

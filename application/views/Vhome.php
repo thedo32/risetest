@@ -106,7 +106,7 @@
 	?>
 
 	<div class=h10> 
-		<a href="https://en.kopibatigo.id">ENG</a><br>
+		<a href="https://en.kopibatigo.id/home">ENG</a><br>
 		<a href="#" class="fa fa-instagram"></a><br>
 		<a href="#" class="fa fa-facebook"></a><br>
 	</div>

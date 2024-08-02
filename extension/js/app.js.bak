@@ -45,7 +45,7 @@ function showSlidesPop() {
 	slidePopIndex++;
 	if (slidePopIndex > slidesPop.length) { slidePopIndex = 1 }
 	fadeInOut(slidesPop[slidePopIndex - 1]);
-	setTimeout(showSlidesPop, 10000); // Change image every 10 seconds
+	setTimeout(showSlidesPop, 6000); // Change image every 6 seconds
 }
 
 function currentSlidePop(n) {

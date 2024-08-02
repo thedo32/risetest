@@ -94,14 +94,14 @@
 	</div>
 
 	<?php if ($this->session->userdata("name") === Null):
-		$name = "Tamu";
+		$name = " ";
 	else:
 		$name = $this->session->userdata("name");
 	endif; 
 	
 	$pesanan = $taluak->title;
 
-	$whatsappLink = "https://wa.me/628994659530?text=" . urlencode("Halo Kupi Batigo, saya $name, tertarik untuk memesan $pesanan");
+	$whatsappLink = "https://wa.me/62811663504?text=" . urlencode("Halo Kupi Batigo, Saya tertarik untuk memesan $pesanan");
 
 	?>
 

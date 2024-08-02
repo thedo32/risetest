@@ -4,44 +4,44 @@
     <div class="next" onclick="plusSlidesPop(1)">&#10095;</div>
 
     <div class="mySlidesPop">
-		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-eko-wisata-mangrove')?>" class=h12>
-			Penawaran menarik untuk Eko Wisata Hutan Mangrove di Kupi Batigo  	
-			<img src="<?php echo base_url ("/storage/app/public/images/slider/mangrove.png");?>" style="width:80%"><br>
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-eko-wisata-mangrove-per-perahu')?>" > 	
+			<img src="<?php echo base_url ("/storage/app/public/images/slider/mangrove_perahu.png");?>" style="width:80%"><br>
         </a>
     </div>
 
     <div class="mySlidesPop">
-		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-berkemah-sewa-tempat-tenda-makan')?>" class=h12>
-            Penawaran menarik untuk Berkemah di Kupi Batigo
-			<img src="<?php echo base_url ("/storage/app/public/images/slider/tenda_kemah_makan.png");?>" style="width:80%"><br>
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-eko-wisata-mangrove-per-orang')?>" >
+			<img src="<?php echo base_url ("/storage/app/public/images/slider/mangrove_orang.png");?>" style="width:80%"><br>
 		</a> 
 	</div>
 
 	<div class="mySlidesPop">
-		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-kolam-hiu-dan-snorkeling')?>" class=h12>
-			Penawaran menarik untuk Wisata Kolam Hiu di Kupi Batigo
-		<img src="<?php echo base_url ("/storage/app/public/images/slider/kolam_hiu_snorkle.png");?>" style="width:80%"><br>
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-snorkling-kupi-batigo')?>" >
+		<img src="<?php echo base_url ("/storage/app/public/images/slider/snorkle.png");?>" style="width:80%"><br>
         </a>
     </div>
 
     <div class="mySlidesPop">
-		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-berkemah-sewa-tempat-dan-makan')?>" class=h12> 
-			Penawaran menarik untuk Berkemah di Kupi Batigo
-			<img src="<?php echo base_url ("/storage/app/public/images/slider/kemah_makan.png");?>" style="width:80%"><br>
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-snorkling-kolam-hiu')?>" >
+		<img src="<?php echo base_url ("/storage/app/public/images/slider/hiu_snorkle.png");?>" style="width:80%"><br>
         </a>
     </div>
 
 	<div class="mySlidesPop">
-		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-kolam-hiu')?>" class=h12>
-			Penawaran menarik untuk Wisata Kolam Hiu di Kupi Batigo
-			<img src="<?php echo base_url ("/storage/app/public/images/slider/kolam_hiu.png");?>" style="width:80%"><br>
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-berkemah')?>">
+		<img src="<?php echo base_url ("/storage/app/public/images/slider/kemah.png");?>" style="width:80%"><br>
         </a>
     </div>
 
-    <div class="mySlidesPop">
-		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-berkemah-sewa-tempat-saja')?>" class=h12>
-			Penawaran menarik untuk Berkemah di Kupi Batigo
-		<img src="<?php echo base_url ("/storage/app/public/images/slider/hanya_kemah.png");?>" style="width:80%"><br>
+	 <div class="mySlidesPop">
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-memancing-area-dekat')?>" >
+		<img src="<?php echo base_url ("/storage/app/public/images/slider/mancing_dekat.png");?>" style="width:80%"><br>
+        </a>
+    </div>
+
+	<div class="mySlidesPop">
+		<a href="<?php echo site_url('taluak/view/wisata-kupi-batigo-paket-memancing-area-dekat')?>" >
+			<img src="<?php echo base_url ("/storage/app/public/images/slider/mancing_jauh.png");?>" style="width:80%"><br>
         </a>
     </div>
 </div>

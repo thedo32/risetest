@@ -6,7 +6,7 @@ class Taluak extends CI_Controller {
     
     public function __construct() {
         parent::__construct();
-		 $this->load->model('Mhome');
+		$this->load->model('Mhome');
         $this->load->model('Mtaluak');
         $this->load->library('pagination');
 		$this->load->helper('url');
@@ -153,7 +153,7 @@ class Taluak extends CI_Controller {
         $user_id = $this->session->userdata("name") != null ? $this->session->userdata("id") : 0;
 
         $art_id = 0;
-        $title = "Wisata";
+        $title = "Tour";
         $this->Mhome->increment_hit_count($title, $user_id, $art_id, $ip_address, $referrer, $utm_params);
 
 
@@ -213,8 +213,8 @@ class Taluak extends CI_Controller {
         $user_id = $this->session->userdata("name") != null ? $this->session->userdata("id") : 0;
 
         $title=$data['taluak']->title;
-		$id=$data['taluak']->id;
-        $this->Mhome->increment_hit_count($title, $user_id, $id, $ip_address, $referrer, $utm_params);
+		$art_id=$data['taluak']->id;
+        $this->Mhome->increment_hit_count($title, $user_id, $art_id, $ip_address, $referrer, $utm_params);
 
 
 		// Get city and country based on IP address

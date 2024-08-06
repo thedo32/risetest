@@ -128,7 +128,7 @@
 				<td>Visitor Location: <?php //echo $city; ?>, <?php //echo $country; ?></p></td>
 			</tr> -->
 		</tbody>	
-	</table>m,,,`1 `
+	</table>
 	
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Ûp</button>
 

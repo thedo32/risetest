@@ -153,8 +153,8 @@ class Painan extends CI_Controller {
         $user_id = $this->session->userdata("name") != null ? $this->session->userdata("id") : 0;
 
         $art_id = 0;
-        $title = "Creative Space";
-        $this->Mhome->increment_hit_count($title, $user_id, $art_id, $ip_address, $referrer,$utm_params);
+        $title = "Creative Space Eng";
+        $this->Mhome->increment_hit_count($title, $user_id, $art_id, $ip_address, $referrer, $utm_params);
 
 
     // Pagination configuration
@@ -213,8 +213,8 @@ class Painan extends CI_Controller {
         $user_id = $this->session->userdata("name") != null ? $this->session->userdata("id") : 0;
 
         $title=$data['painan']->title;
-		$id=$data['painan']->id;
-        $this->Mhome->increment_hit_count($title, $user_id, $id, $ip_address, $referrer, $utm_params);
+		$art_id=$data['painan']->id;
+        $this->Mhome->increment_hit_count($title, $user_id, $art_id, $ip_address, $referrer, $utm_params);
 
 
 		// Get city and country based on IP address

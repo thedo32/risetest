@@ -244,6 +244,16 @@ h6, .h6 {
 		text-decoration: none;
 	}
 
+.h13 {
+	z-index: 1002;
+	font-size:0.7em;
+	text-decoration: none;
+}
+
+	.h13:hover {
+		text-decoration: none;
+	}
+
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;

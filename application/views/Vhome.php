@@ -150,7 +150,7 @@
 		<strong>Cara menuju ke sana:</strong><br>
 		Desa Wisata Teluk Buo terletak sekitar 30 kilometer dari Pusat Kota Padang, bisa menggunakan transportasi umum atau menyewa mobil untuk sampai ke sana.<br>
 		<strong>Penginapan:</strong><br>
-		Terdapat beberapa homestay dan guest house yang tersedia di Desa Wisata Teluk Buo, termasuk Homestay dan Camping Ground Kupibatigo Taluak Buo<br>
+		Terdapat beberapa homestay dan guest house yang tersedia di Desa Wisata Teluk Buo, termasuk Homestay dan Camping Ground Kupi Batigo Teluk Buo<br>
 		<strong>Tips:</strong><br>
 		Bawa tabir surya, lotion anti nyamuk, topi, jangan lupa hormati budaya dan lingkungan setempat.
 	  </div>
